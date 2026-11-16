@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640" role="img" aria-label="Frontend Frameworks 2026 Comparison, Same-App Benchmarks and Starters">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070b14"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1280" height="6" fill="url(#accent)"/>
+  <g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Inter,sans-serif">
+    <rect x="64" y="48" width="286" height="32" rx="16" fill="#132238" stroke="#254066"/>
+    <text x="84" y="69" fill="#38bdf8" font-size="14" font-weight="700">VERIFIED LIVE DATA • 2026-11-16</text>
+    <text x="64" y="136" fill="#f8fafc" font-size="46" font-weight="800">Frontend Frameworks Comparison (2026)</text>
+    <text x="64" y="176" fill="#94a3b8" font-size="22">React 19.3 • Vue 3.5 • Angular 22.2 • Svelte 5.57 • SolidJS • Next.js • Astro 7</text>
+
+    <!-- 4 KPI Cards -->
+    <g transform="translate(64,218)">
+      <rect width="272" height="140" rx="14" fill="#111c33" stroke="#243656"/>
+      <text x="22" y="38" fill="#38bdf8" font-size="15" font-weight="700">REACT 19.3.1</text>
+      <text x="22" y="78" fill="#f8fafc" font-size="30" font-weight="800">260.9M / wk</text>
+      <text x="22" y="108" fill="#94a3b8" font-size="15">252,661 ★ • Hooks + Compiler</text>
+    </g>
+    <g transform="translate(356,218)">
+      <rect width="272" height="140" rx="14" fill="#111c33" stroke="#243656"/>
+      <text x="22" y="38" fill="#10b981" font-size="15" font-weight="700">VUE 3.5.45</text>
+      <text x="22" y="78" fill="#f8fafc" font-size="30" font-weight="800">25.2M / wk</text>
+      <text x="22" y="108" fill="#94a3b8" font-size="15">55,029 ★ (core) • SFC + Pinia</text>
+    </g>
+    <g transform="translate(648,218)">
+      <rect width="272" height="140" rx="14" fill="#111c33" stroke="#243656"/>
+      <text x="22" y="38" fill="#f97316" font-size="15" font-weight="700">SVELTE 5.57.3</text>
+      <text x="22" y="78" fill="#f8fafc" font-size="30" font-weight="800">9.8M / wk</text>
+      <text x="22" y="108" fill="#94a3b8" font-size="15">88,785 ★ • Runes ($state)</text>
+    </g>
+    <g transform="translate(940,218)">
+      <rect width="276" height="140" rx="14" fill="#111c33" stroke="#243656"/>
+      <text x="22" y="38" fill="#f43f5e" font-size="15" font-weight="700">ANGULAR 22.2.6</text>
+      <text x="22" y="78" fill="#f8fafc" font-size="30" font-weight="800">8.2M / wk</text>
+      <text x="22" y="108" fill="#94a3b8" font-size="15">101,480 ★ • Signals + TS</text>
+    </g>
+
+    <!-- Bottom Feature Bar -->
+    <g transform="translate(64,394)">
+      <rect width="1152" height="176" rx="16" fill="#0d1526" stroke="#243656"/>
+      <text x="32" y="44" fill="#10b981" font-size="16" font-weight="700">WHAT IS INSIDE THIS REPOSITORY</text>
+      <text x="32" y="84" fill="#f8fafc" font-size="21" font-weight="600">1. Live 15-Framework Matrix (Core UI + Next.js, Nuxt, SvelteKit, Astro)</text>
+      <text x="32" y="118" fill="#f8fafc" font-size="21" font-weight="600">2. Interactive Framework Selector + Identical App in 5 Frameworks</text>
+      <text x="32" y="152" fill="#f8fafc" font-size="21" font-weight="600">3. Free MIT Vite &amp; Astro Starter Templates • github.com/javascript-frontend/frontend-frameworks</text>
+    </g>
+  </g>
+</svg>

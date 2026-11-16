@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Frontend Frameworks Comparison &amp; Selector (2026) — React, Vue, Angular, Svelte &amp; More</title>
+  <meta name="description" content="Compare 15 verified frontend frameworks in 2026: React 19, Vue 3.5, Angular 22, Svelte 5, SolidJS, Next.js 16 &amp; Astro 7. Interactive selector, identical app code, and free starters." />
+  <link rel="canonical" href="https://javascript-frontend.github.io/frontend-frameworks/" />
+  <meta property="og:title" content="Frontend Frameworks Comparison &amp; Selector (2026)" />
+  <meta property="og:description" content="Live GitHub &amp; npm metrics, workload-based framework selector, identical app across 5 frameworks, and free MIT starter templates." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://javascript-frontend.github.io/frontend-frameworks/" />
+  <meta property="og:image" content="https://javascript-frontend.github.io/frontend-frameworks/assets/preview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Frontend Frameworks Comparison & Interactive Selector (2026)",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0.00", "priceCurrency": "USD" },
+    "description": "Verified 2026 comparison of 15 JavaScript frontend frameworks and meta-frameworks with workload selector, side-by-side app code, and free starter templates.",
+    "url": "https://javascript-frontend.github.io/frontend-frameworks/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Top Frontend Frameworks in 2026",
+    "url": "https://javascript-frontend.github.io/frontend-frameworks/",
+    "numberOfItems": 6,
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "React 19.3.1 (252.7K stars, 260.9M npm/wk)", "url": "https://react.dev/" },
+      { "@type": "ListItem", "position": 2, "name": "Next.js 16.4.6 (143.6K stars, 94.4M npm/wk)", "url": "https://nextjs.org/" },
+      { "@type": "ListItem", "position": 3, "name": "Vue 3.5.45 (55.0K core stars, 25.2M npm/wk)", "url": "https://vuejs.org/" },
+      { "@type": "ListItem", "position": 4, "name": "Astro 7.4.12 (64.0K stars, 12.0M npm/wk)", "url": "https://astro.build/" },
+      { "@type": "ListItem", "position": 5, "name": "Svelte 5.57.3 (88.8K stars, 9.8M npm/wk)", "url": "https://svelte.dev/" },
+      { "@type": "ListItem", "position": 6, "name": "Angular 22.2.6 (101.5K stars, 8.2M npm/wk)", "url": "https://angular.dev/" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the most popular frontend framework in 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "React (19.3.1) leads in both GitHub stars (252,661) and weekly npm downloads (260.9M), followed on npm by Next.js (94.4M), React Router (76.9M), Preact (59.0M), and Vue (25.2M)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which frontend framework is best for SEO and Core Web Vitals?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Astro 7 is ideal for content, docs, and marketing landings because it ships 0 KB of client JS by default. For dynamic SSR apps, choose Next.js, Nuxt, or SvelteKit."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #080d1a;
+      --surface: #111c33;
+      --surface-alt: #182644;
+      --border: #263554;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --accent: #10b981;
+      --blue: #38bdf8;
+      --amber: #f59e0b;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: var(--font-sans); line-height: 1.6; overflow-x: clip; }
+    .container { max-width: 1180px; margin: 0 auto; padding: 24px 20px 80px; }
+    nav { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-bottom: 18px; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+    .brand { font-weight: 800; color: var(--text); text-decoration: none; font-size: 16px; }
+    .nav-links { display: flex; gap: 16px; flex-wrap: wrap; font-size: 14px; }
+    .nav-links a { color: var(--muted); text-decoration: none; }
+    .nav-links a:hover { color: var(--text); }
+    .hero { padding: 36px 0 28px; }
+    .pill { display: inline-block; padding: 4px 12px; border-radius: 999px; background: #132238; border: 1px solid #254066; color: var(--blue); font-size: 12px; font-weight: 700; letter-spacing: .04em; margin-bottom: 14px; }
+    h1 { font-size: clamp(28px, 4.4vw, 44px); line-height: 1.15; margin: 0 0 14px; letter-spacing: -0.02em; }
+    .lead { color: var(--muted); font-size: 17px; max-width: 78ch; margin: 0 0 22px; }
+    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 8px; font-weight: 600; font-size: 14px; text-decoration: none; border: 1px solid var(--border); cursor: pointer; background: var(--surface); color: var(--text); }
+    .btn-primary { background: var(--blue); color: #06121e; border-color: var(--blue); }
+    .btn:hover { filter: brightness(1.08); }
+    section { margin-top: 42px; }
+    h2 { font-size: 24px; margin: 0 0 14px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px; }
+    .controls { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; align-items: center; }
+    select, input[type="search"] { background: var(--surface-alt); color: var(--text); border: 1px solid var(--border); border-radius: 8px; padding: 9px 12px; font-size: 14px; }
+    label.check { display: inline-flex; align-items: center; gap: 7px; font-size: 14px; color: var(--muted); cursor: pointer; }
+    .table-wrap { width: 100%; overflow-x: auto; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; }
+    table { width: 100%; min-width: 780px; border-collapse: collapse; font-size: 14px; }
+    th, td { padding: 12px 14px; border-bottom: 1px solid var(--border); text-align: left; }
+    th { background: var(--surface-alt); color: var(--muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+    tr:last-child td { border-bottom: none; }
+    a { color: var(--blue); }
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 6px; font-size: 12px; font-weight: 600; background: var(--surface-alt); color: var(--accent); border: 1px solid var(--border); }
+    .tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+    .tab-btn { padding: 8px 14px; border-radius: 8px; background: var(--surface-alt); color: var(--muted); border: 1px solid var(--border); cursor: pointer; font-weight: 600; font-size: 13px; }
+    .tab-btn.active { background: var(--blue); color: #06121e; border-color: var(--blue); }
+    pre { margin: 0; padding: 16px; border-radius: 12px; background: #050912; border: 1px solid var(--border); overflow-x: auto; font-family: var(--font-mono); font-size: 13px; line-height: 1.5; color: #e2e8f0; }
+    code { font-family: var(--font-mono); font-size: 13px; }
+    .muted { color: var(--muted); font-size: 14px; }
+    footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--muted); font-size: 13px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <a class="brand" href="./">javascript-frontend / frontend-frameworks</a>
+      <div class="nav-links">
+        <a href="#selector">Selector</a>
+        <a href="#comparison">Table (15)</a>
+        <a href="#same-app">Same App (5)</a>
+        <a href="#starters">Free Starters</a>
+        <a href="react-vs-vue.html">React vs Vue</a>
+        <a href="react-vs-svelte.html">React vs Svelte</a>
+        <a href="best-frontend-framework-for-seo.html">Best for SEO</a>
+        <a href="https://github.com/javascript-frontend/frontend-frameworks">GitHub</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <span class="pill">VERIFIED LIVE DATA • 2026-11-16</span>
+      <h1>Frontend Frameworks Comparison &amp; Selector (2026)</h1>
+      <p class="lead">
+        An up-to-date benchmark of 15 active JavaScript frontend frameworks and meta-frameworks—built to replace outdated gists with live GitHub &amp; npm metrics, workload-based recommendations, the identical Sprint Task Tracker in 5 frameworks, and free MIT starter templates.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#selector">Find Your Framework</a>
+        <a class="btn" href="#same-app">Compare Identical App Code</a>
+        <a class="btn" href="https://github.com/javascript-frontend/frontend-frameworks">Star on GitHub</a>
+      </div>
+    </header>
+
+    <section id="selector">
+      <h2>Interactive Frontend Framework Selector</h2>
+      <div class="card">
+        <div class="controls">
+          <select id="useCase">
+            <option value="saas-dashboard">Interactive SaaS Dashboard / Web App</option>
+            <option value="seo-content">SEO Content Site, Docs or Landing</option>
+            <option value="enterprise-app">Large Enterprise Multi-Team Platform</option>
+            <option value="ecommerce">E-Commerce Storefront</option>
+            <option value="lightweight-widget">Embeddable Widget / Low-JS</option>
+            <option value="internal-tool">Internal Admin Portal / CRUD</option>
+            <option value="ai-app">AI Streaming Workspace</option>
+          </select>
+          <label class="check"><input type="checkbox" id="seoCritical" /> SEO / SSR Critical</label>
+          <label class="check"><input type="checkbox" id="lowBundle" /> Minimal Client JS</label>
+          <label class="check"><input type="checkbox" id="lowCurve" /> Fast Onboarding</label>
+        </div>
+        <div id="selectorResults" class="grid-3"></div>
+      </div>
+    </section>
+
+    <section id="comparison">
+      <h2>2026 Verified Comparison Table</h2>
+      <div class="controls">
+        <input type="search" id="searchBox" placeholder="Filter by name, model, license..." />
+        <select id="catFilter">
+          <option value="all">All Categories (15)</option>
+          <option value="core-ui">Core UI Frameworks (10)</option>
+          <option value="meta-framework">Full-Stack Meta-Frameworks (5)</option>
+        </select>
+        <select id="sortBy">
+          <option value="downloads">Sort: npm Weekly Downloads</option>
+          <option value="stars">Sort: GitHub Stars</option>
+          <option value="seo">Sort: SSR / SEO Score</option>
+        </select>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Framework</th>
+              <th>Category</th>
+              <th>Latest</th>
+              <th>GitHub Stars</th>
+              <th>npm Weekly</th>
+              <th>Rendering / Reactivity</th>
+              <th>SSR/SEO</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+      <p class="muted" style="margin-top:10px;">Note: Vue GitHub stars reflect active <code>vuejs/core</code> (55,029); legacy Vue 2 repo <code>vuejs/vue</code> has 212,519 stars.</p>
+    </section>
+
+    <section id="same-app">
+      <h2>Same App Built in 5 Frameworks (Sprint Task Tracker)</h2>
+      <p class="muted">Compare how React 19, Vue 3.5, Svelte 5, Angular 22, and SolidJS handle the exact same local state, derived counters, filtering, and localStorage persistence.</p>
+      <div class="tabs" id="codeTabs">
+        <button class="tab-btn active" data-fw="react">React 19 (82 lines)</button>
+        <button class="tab-btn" data-fw="vue">Vue 3.5 (76 lines)</button>
+        <button class="tab-btn" data-fw="svelte">Svelte 5 Runes (77 lines)</button>
+        <button class="tab-btn" data-fw="angular">Angular 22 Signals (93 lines)</button>
+        <button class="tab-btn" data-fw="solid">SolidJS 1.9 (88 lines)</button>
+      </div>
+      <pre><code id="codeViewer">Loading implementation...</code></pre>
+    </section>
+
+    <section id="starters">
+      <h2>Free MIT Starter Templates</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>React 19 + Vite + TypeScript</h3>
+          <p class="muted">Clean strict-mode baseline for SaaS dashboards and SPAs.</p>
+          <code>npx degit javascript-frontend/frontend-frameworks/starters/react-vite-ts-saas my-app</code>
+        </div>
+        <div class="card">
+          <h3>Vue 3.5 + Vite + TypeScript</h3>
+          <p class="muted">Composition API (&lt;script setup&gt;) baseline ready for Pinia &amp; Vue Router.</p>
+          <code>npx degit javascript-frontend/frontend-frameworks/starters/vue3-vite-ts-app my-app</code>
+        </div>
+        <div class="card">
+          <h3>Svelte 5 Runes + Vite + TypeScript</h3>
+          <p class="muted">Minimal-bundle reactive app using $state and $derived runes.</p>
+          <code>npx degit javascript-frontend/frontend-frameworks/starters/svelte5-vite-ts-app my-app</code>
+        </div>
+        <div class="card">
+          <h3>Astro 7 Zero-JS SEO Landing</h3>
+          <p class="muted">Semantic HTML landing template shipping 0 KB of client JS by default.</p>
+          <code>npx degit javascript-frontend/frontend-frameworks/starters/astro-seo-landing my-site</code>
+        </div>
+      </div>
+    </section>
+
+    <section id="comparisons">
+      <h2>Deep-Dive Framework Comparisons</h2>
+      <div class="grid-3">
+        <a class="card" href="react-vs-vue.html" style="text-decoration:none;color:inherit"><strong>React vs Vue (2026)</strong><p class="muted">Ecosystem size vs SFC ergonomics &amp; onboarding speed.</p></a>
+        <a class="card" href="react-vs-svelte.html" style="text-decoration:none;color:inherit"><strong>React vs Svelte 5 (2026)</strong><p class="muted">Hooks + VDOM vs compiler-driven Runes reactivity.</p></a>
+        <a class="card" href="react-vs-angular.html" style="text-decoration:none;color:inherit"><strong>React vs Angular 22 (2026)</strong><p class="muted">Composable library vs batteries-included enterprise platform.</p></a>
+        <a class="card" href="best-frontend-framework-for-seo.html" style="text-decoration:none;color:inherit"><strong>Best Frameworks for SEO</strong><p class="muted">Astro Islands, Next.js SSR, Nuxt, SvelteKit &amp; Qwik compared.</p></a>
+        <a class="card" href="lightweight-frontend-frameworks.html" style="text-decoration:none;color:inherit"><strong>Lightweight Frameworks</strong><p class="muted">Svelte, SolidJS, Preact, Lit, Alpine.js &amp; htmx bundle guide.</p></a>
+      </div>
+    </section>
+
+    <footer>
+      <span>Data verified 2026-11-16 via GitHub &amp; npm APIs • MIT License</span>
+      <span><a href="https://github.com/javascript-frontend/frontend-frameworks">github.com/javascript-frontend/frontend-frameworks</a> • <a href="llms.txt">llms.txt</a></span>
+    </footer>
+  </div>
+
+  <script>
+    const CODE_SNIPPETS = {
+      react: `const [tasks, setTasks] = useState<Task[]>(loadInitial);\nconst [filter, setFilter] = useState<Filter>("all");\nuseEffect(() => localStorage.setItem(KEY, JSON.stringify(tasks)), [tasks]);\nconst remaining = useMemo(() => tasks.filter(t => !t.done).length, [tasks]);`,
+      vue: `const tasks = ref<Task[]>(loadInitial());\nconst filter = ref<Filter>("all");\nwatch(tasks, v => localStorage.setItem(KEY, JSON.stringify(v)), { deep: true });\nconst remaining = computed(() => tasks.value.filter(t => !t.done).length);`,
+      svelte: `let tasks = $state<Task[]>(loadInitial());\nlet filter = $state<Filter>("all");\n$effect(() => localStorage.setItem(KEY, JSON.stringify(tasks)));\nconst remaining = $derived(tasks.filter(t => !t.done).length);`,
+      angular: `tasks = signal<Task[]>(this.load());\nfilter = signal<Filter>("all");\nremaining = computed(() => this.tasks().filter(t => !t.done).length);\nconstructor() { effect(() => localStorage.setItem(KEY, JSON.stringify(this.tasks()))); }`,
+      solid: `const [tasks, setTasks] = createSignal<Task[]>(loadInitial());\nconst [filter, setFilter] = createSignal<Filter>("all");\ncreateEffect(() => localStorage.setItem(KEY, JSON.stringify(tasks())));\nconst remaining = createMemo(() => tasks().filter(t => !t.done).length);`
+    };
+
+    const FULL_EXAMPLES_URL = "https://github.com/javascript-frontend/frontend-frameworks/tree/main/examples/same-app-task-tracker";
+
+    let allFrameworks = [];
+    const fmt = (n) => n >= 1e6 ? (n / 1e6).toFixed(1) + "M" : n >= 1e3 ? (n / 1e3).toFixed(1) + "K" : String(n);
+
+    function scoreItem(fw) {
+      const uc = document.getElementById("useCase").value;
+      const seo = document.getElementById("seoCritical").checked;
+      const lowB = document.getElementById("lowBundle").checked;
+      const lowC = document.getElementById("lowCurve").checked;
+      let score = 0;
+      const reasons = [];
+      const idx = (fw.best_for || []).indexOf(uc);
+      if (idx !== -1) { score += Math.max(40 - idx * 8, 16); reasons.push("Fits " + uc); }
+      if (seo) {
+        score += (fw.ssr_seo_score || 3) * 6;
+        if (fw.category === "meta-framework") { score += 12; reasons.push("Built-in SSR/SSG"); }
+      }
+      if (lowB && /zero js|tiny/i.test(fw.runtime_tier || "")) { score += 22; reasons.push("Minimal client JS"); }
+      if (lowC && /very low|^low$/i.test(fw.learning_curve || "")) { score += 15; reasons.push("Fast onboarding"); }
+      if (fw.npm_weekly_downloads >= 50e6) score += 8;
+      else if (fw.npm_weekly_downloads >= 10e6) score += 5;
+      return { fw, score, reasons };
+    }
+
+    function renderSelector() {
+      const container = document.getElementById("selectorResults");
+      container.textContent = "";
+      const top = allFrameworks.map(scoreItem).sort((a, b) => b.score - a.score).slice(0, 3);
+      for (const item of top) {
+        const card = document.createElement("div");
+        card.className = "card";
+        const h3 = document.createElement("h3");
+        h3.style.margin = "0 0 6px";
+        h3.textContent = `${item.fw.name} (${item.fw.latest_version})`;
+        const badge = document.createElement("span");
+        badge.className = "badge";
+        badge.textContent = `Match ${item.score} • ${item.fw.category}`;
+        const p = document.createElement("p");
+        p.className = "muted";
+        p.textContent = item.reasons.length ? item.reasons.join(" • ") + " — " + item.fw.summary : item.fw.summary;
+        const link = document.createElement("a");
+        link.href = item.fw.official_url;
+        link.target = "_blank";
+        link.rel = "noopener";
+        link.textContent = "Official Docs →";
+        card.append(h3, badge, p, link);
+        container.appendChild(card);
+      }
+    }
+
+    function renderTable() {
+      const q = document.getElementById("searchBox").value.trim().toLowerCase();
+      const cat = document.getElementById("catFilter").value;
+      const sort = document.getElementById("sortBy").value;
+      const rows = allFrameworks
+        .filter((f) => (cat === "all" || f.category === cat))
+        .filter((f) => !q || JSON.stringify(f).toLowerCase().includes(q))
+        .sort((a, b) => sort === "stars" ? b.stars - a.stars : sort === "seo" ? b.ssr_seo_score - a.ssr_seo_score : b.npm_weekly_downloads - a.npm_weekly_downloads);
+
+      const tbody = document.getElementById("tableBody");
+      tbody.textContent = "";
+      for (const f of rows) {
+        const tr = document.createElement("tr");
+        const cells = [
+          () => { const a = document.createElement("a"); a.href = f.official_url; a.target = "_blank"; a.rel = "noopener"; a.textContent = f.name; return a; },
+          () => f.category,
+          () => f.latest_version,
+          () => f.stars.toLocaleString(),
+          () => fmt(f.npm_weekly_downloads),
+          () => f.rendering_model,
+          () => `${f.ssr_seo_score}/5`,
+        ];
+        for (const make of cells) {
+          const td = document.createElement("td");
+          const val = make();
+          if (typeof val === "string") td.textContent = val;
+          else td.appendChild(val);
+          tr.appendChild(td);
+        }
+        tbody.appendChild(tr);
+      }
+    }
+
+    function setCodeTab(fw) {
+      document.querySelectorAll("#codeTabs .tab-btn").forEach((b) => b.classList.toggle("active", b.dataset.fw === fw));
+      document.getElementById("codeViewer").textContent = `${CODE_SNIPPETS[fw]}\n\n// Full runnable source: ${FULL_EXAMPLES_URL}/${fw}`;
+    }
+
+    document.querySelectorAll("#codeTabs .tab-btn").forEach((btn) => btn.addEventListener("click", () => setCodeTab(btn.dataset.fw)));
+    ["useCase", "seoCritical", "lowBundle", "lowCurve"].forEach((id) => document.getElementById(id).addEventListener("change", renderSelector));
+    ["searchBox", "catFilter", "sortBy"].forEach((id) => document.getElementById(id).addEventListener("input", renderTable));
+
+    setCodeTab("react");
+    fetch("./frameworks.json")
+      .then((r) => r.json())
+      .then((data) => {
+        allFrameworks = data.frameworks || [];
+        renderSelector();
+        renderTable();
+      });
+  </script>
+</body>
+</html>

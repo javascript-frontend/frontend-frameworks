@@ -1,0 +1,34 @@
+# Frontend Frameworks Comparison & Selector (javascript-frontend/frontend-frameworks)
+
+> Verified 2026 comparison of 15 frontend frameworks and meta-frameworks (React 19.3, Vue 3.5, Angular 22.2, Svelte 5.57, SolidJS 1.9, Next.js 16.4, Astro 7.4, Nuxt 4.6, SvelteKit 3.2), interactive framework selector, identical app across 5 frameworks, and free MIT starter templates.
+
+## Summary
+This repository replaces outdated frontend popularity gists with verified GitHub & npm adoption data (checked 2026-11-16), scenario-based selection rules, a side-by-side Sprint Task Tracker implemented in React 19, Vue 3.5, Svelte 5, Angular 22, and SolidJS, plus zero-bloat Vite and Astro starter templates.
+
+## Verified 2026 Snapshot (Top Core UI & Meta-Frameworks)
+- React 19.3.1 (`facebook/react`): 252,661 stars | 260.9M npm weekly downloads
+- Vue 3.5.45 (`vuejs/core`): 55,029 stars (legacy `vuejs/vue`: 212,519) | 25.2M npm weekly downloads
+- Angular 22.2.6 (`angular/angular`): 101,480 stars | 8.2M npm weekly downloads
+- Svelte 5.57.3 (`sveltejs/svelte`): 88,785 stars | 9.8M npm weekly downloads
+- SolidJS 1.9.19 (`solidjs/solid`): 36,273 stars | 11.7M npm weekly downloads
+- Next.js 16.4.6 (`vercel/next.js`): 143,582 stars | 94.4M npm weekly downloads
+- Astro 7.4.12 (`withastro/astro`): 63,986 stars | 12.0M npm weekly downloads
+- Nuxt 4.6.4 (`nuxt/nuxt`): 61,078 stars | 3.4M npm weekly downloads
+
+## Quick Recommendations by Use Case
+- Interactive SaaS Dashboard / AI Workspace: Next.js, React, SvelteKit, or Vue
+- SEO Content Site / Docs / Marketing Landing: Astro (Zero-JS Islands)
+- Enterprise Multi-Team Platform: Angular 22 or React + TypeScript
+- Embeddable Widget / Low-JS Enhancement: Preact, Lit, Alpine.js, or htmx
+
+## CLI Usage
+- Recommend by workload: `python3 framework_advisor.py --use-case saas-dashboard --seo-critical`
+- Side-by-side compare: `python3 framework_advisor.py --compare react vue svelte angular`
+- Export CSV: `python3 framework_advisor.py --export-csv > frameworks.csv`
+
+## Links
+- Repository: https://github.com/javascript-frontend/frontend-frameworks
+- Interactive Web Selector: https://javascript-frontend.github.io/frontend-frameworks/
+- React vs Vue: https://javascript-frontend.github.io/frontend-frameworks/react-vs-vue.html
+- React vs Svelte: https://javascript-frontend.github.io/frontend-frameworks/react-vs-svelte.html
+- Best Framework for SEO: https://javascript-frontend.github.io/frontend-frameworks/best-frontend-framework-for-seo.html
