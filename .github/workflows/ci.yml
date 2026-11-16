@@ -18,11 +18,17 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
       - name: Run unit tests
         run: python3 -m unittest discover -s tests -v
 
-      - name: Verify dataset and CLI
+      - name: Verify dataset and CLIs
         run: |
           python3 framework_advisor.py --verify-sync
           python3 framework_advisor.py --use-case saas-dashboard --seo-critical
-          python3 framework_advisor.py --compare react vue svelte angular
+          node src/advisor.ts --use-case saas-dashboard --seo-critical
+          node src/advisor.ts --compare react vue svelte angular

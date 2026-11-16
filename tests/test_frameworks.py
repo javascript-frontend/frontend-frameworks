@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+import shutil
 import subprocess
 import sys
 import unittest
@@ -66,6 +67,23 @@ class TestFrontendFrameworksRepo(unittest.TestCase):
             check=True,
         )
         self.assertIn("github_repo,npm_package", csv_res.stdout)
+
+    def test_typescript_advisor_cli(self) -> None:
+        node_bin = shutil.which("node")
+        if not node_bin:
+            self.skipTest("node not installed")
+        major = int(subprocess.check_output([node_bin, "-p", "process.versions.node.split('.')[0]"], text=True).strip())
+        if major < 22:
+            self.skipTest("node >= 22 required for native TypeScript stripping")
+        res = subprocess.run(
+            [node_bin, str(ROOT / "src" / "advisor.ts"), "--use-case", "saas-dashboard", "--seo-critical", "--json"],
+            capture_output=True,
+            text=True,
+            check=True,
+        )
+        payload = json.loads(res.stdout)
+        self.assertEqual(payload["use_case"], "saas-dashboard")
+        self.assertGreaterEqual(len(payload["recommendations"]), 3)
 
     def test_examples_and_starters_exist(self) -> None:
         examples = [

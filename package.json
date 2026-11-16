@@ -1,0 +1,12 @@
+{
+  "name": "frontend-frameworks",
+  "private": true,
+  "version": "1.0.0",
+  "description": "2026 Frontend Frameworks Comparison, Workload Selector & Free Starter Templates",
+  "type": "module",
+  "scripts": {
+    "advisor": "node src/advisor.ts",
+    "test": "python3 -m unittest discover -s tests -v"
+  },
+  "license": "MIT"
+}
