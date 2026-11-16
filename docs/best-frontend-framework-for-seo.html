@@ -3,44 +3,123 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Best Frontend Frameworks for SEO &amp; Core Web Vitals (2026)</title>
+  <title>Best Frontend Frameworks for SEO and Core Web Vitals (2026)</title>
   <meta name="description" content="Ranking the best frontend frameworks for Google SEO and AI search in 2026: Astro 7 Islands, Next.js 16, Nuxt 4, SvelteKit 3, and Qwik resumability." />
   <link rel="canonical" href="https://javascript-frontend.github.io/frontend-frameworks/best-frontend-framework-for-seo.html" />
   <meta property="og:image" content="https://javascript-frontend.github.io/frontend-frameworks/assets/preview.png" />
-  <style>
-    :root { --bg:#080d1a; --surface:#111c33; --surface-alt:#182644; --border:#263554; --text:#f8fafc; --muted:#94a3b8; --blue:#38bdf8; --font-sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif; }
-    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-sans);line-height:1.65}
-    .container{max-width:980px;margin:0 auto;padding:24px 20px 72px}
-    nav{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-bottom:16px;border-bottom:1px solid var(--border);margin-bottom:28px}
-    a{color:var(--blue)} nav a{text-decoration:none;color:var(--muted);font-size:14px} nav a.brand{color:var(--text);font-weight:700}
-    h1{font-size:clamp(26px,4vw,38px);margin:0 0 12px} .lead{color:var(--muted);font-size:17px;margin-bottom:24px}
-    .table-wrap{overflow-x:auto;background:var(--surface);border:1px solid var(--border);border-radius:12px;margin-bottom:28px}
-    table{width:100%;border-collapse:collapse;font-size:14px} th,td{padding:12px 14px;border-bottom:1px solid var(--border);text-align:left} th{background:var(--surface-alt);color:var(--muted)}
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500&family=Atkinson+Hyperlegible+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/site.css" />
 </head>
 <body>
-  <div class="container">
-    <nav>
-      <a class="brand" href="./">← Frontend Frameworks (2026)</a>
-      <div style="display:flex;gap:14px;flex-wrap:wrap">
+  <header class="site-nav">
+    <div class="container site-nav__inner">
+      <a class="brand" href="./">javascript-frontend</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="./">All frameworks</a>
         <a href="react-vs-vue.html">React vs Vue</a>
-        <a href="lightweight-frontend-frameworks.html">Lightweight Frameworks</a>
-      </div>
-    </nav>
-    <h1>Best Frontend Frameworks for SEO &amp; AI Search (2026)</h1>
-    <p class="lead">Server-rendered HTML and zero-JS Islands directly improve crawlability, Largest Contentful Paint (LCP), Interaction to Next Paint (INP), and AI citation reliability.</p>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Framework</th><th>Version</th><th>Rendering Strategy</th><th>Ideal SEO Workload</th></tr></thead>
-        <tbody>
-          <tr><td><strong>Astro</strong></td><td>7.4.12</td><td>Zero-JS Static / Islands</td><td>Content sites, docs, blogs, programmatic SEO</td></tr>
-          <tr><td><strong>Next.js</strong></td><td>16.4.6</td><td>SSR + SSG + React Server Components</td><td>Dynamic SaaS marketing + e-commerce</td></tr>
-          <tr><td><strong>Nuxt</strong></td><td>4.6.4</td><td>Hybrid SSR / SSG (Nitro)</td><td>Vue-based SEO storefronts and portals</td></tr>
-          <tr><td><strong>SvelteKit</strong></td><td>3.2.0</td><td>SSR + Prerender + Progressive Forms</td><td>Fast interactive web apps needing SSR</td></tr>
-          <tr><td><strong>Qwik</strong></td><td>1.20.4</td><td>Resumability (Zero Hydration)</td><td>Large interactive e-commerce catalogs</td></tr>
-        </tbody>
-      </table>
+        <a href="best-frontend-framework-for-seo.html" aria-current="page">Best for SEO</a>
+        <a href="lightweight-frontend-frameworks.html">Lightweight</a>
+      </nav>
     </div>
-  </div>
+  </header>
+
+  <main>
+    <section class="hero-banner">
+      <div class="container">
+        <h1>Best frontend frameworks for SEO.</h1>
+        <p class="lead">Server-rendered HTML and zero-JS Islands improve crawlability, LCP, and INP.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Rank SSR and zero-JS options.</h2>
+          <p>Versions verified on 2026-11-16 across Astro, Next.js, Nuxt, SvelteKit, and Qwik.</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Framework</th>
+                <th>Version</th>
+                <th>Rendering strategy</th>
+                <th>Ideal SEO workload</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Astro</td>
+                <td class="measured">7.4.12</td>
+                <td>Zero-JS static and Islands</td>
+                <td>Content sites, docs, blogs, programmatic SEO</td>
+              </tr>
+              <tr>
+                <td>Next.js</td>
+                <td class="measured">16.4.6</td>
+                <td>SSR, SSG, React Server Components</td>
+                <td>Dynamic SaaS marketing and e-commerce</td>
+              </tr>
+              <tr>
+                <td>Nuxt</td>
+                <td class="measured">4.6.4</td>
+                <td>Hybrid SSR and SSG (Nitro)</td>
+                <td>Vue-based SEO storefronts and portals</td>
+              </tr>
+              <tr>
+                <td>SvelteKit</td>
+                <td class="measured">3.2.0</td>
+                <td>SSR, prerender, progressive forms</td>
+                <td>Fast interactive web apps needing SSR</td>
+              </tr>
+              <tr>
+                <td>Qwik</td>
+                <td class="measured">1.20.4</td>
+                <td>Resumability (zero hydration)</td>
+                <td>Large interactive e-commerce catalogs</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--band">
+      <div class="container">
+        <div class="section__head">
+          <h2>Split public pages from logged-in apps.</h2>
+          <p>Keep marketing pages fast with zero-JS HTML while dashboards stay decoupled.</p>
+        </div>
+        <div class="panels-grid">
+          <article>
+            <h3>Public marketing and docs</h3>
+            <p class="muted-copy">Use Astro 7 or static prerendering so Googlebot and AI crawlers receive complete semantic HTML with minimal client script.</p>
+          </article>
+          <article>
+            <h3>Dynamic catalogs and SaaS</h3>
+            <p class="muted-copy">Use Next.js 16, Nuxt 4, or SvelteKit 3 when product availability, user pricing, or per-request metadata must stream from the server.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <a class="site-footer__wordmark" href="./">javascript-frontend/frontend-frameworks</a>
+        <div class="footer-links">
+          <a href="react-vs-vue.html">React vs Vue</a>
+          <a href="lightweight-frontend-frameworks.html">Lightweight frameworks</a>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>Data verified 2026-11-16</span>
+        <span>MIT License</span>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

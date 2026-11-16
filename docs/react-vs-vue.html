@@ -3,10 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>React vs Vue (2026): Adoption, Syntax, Ecosystem &amp; Performance Compared</title>
+  <title>React vs Vue (2026): Adoption, Syntax, Ecosystem and Performance</title>
   <meta name="description" content="React 19.3 vs Vue 3.5 in 2026: compare 260.9M vs 25.2M weekly npm downloads, Hooks vs Composition API, Next.js vs Nuxt 4, and which fits your team." />
   <link rel="canonical" href="https://javascript-frontend.github.io/frontend-frameworks/react-vs-vue.html" />
   <meta property="og:image" content="https://javascript-frontend.github.io/frontend-frameworks/assets/preview.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500&family=Atkinson+Hyperlegible+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/site.css" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -18,48 +22,118 @@
     }]
   }
   </script>
-  <style>
-    :root { --bg:#080d1a; --surface:#111c33; --surface-alt:#182644; --border:#263554; --text:#f8fafc; --muted:#94a3b8; --blue:#38bdf8; --accent:#10b981; --font-sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif; }
-    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-sans);line-height:1.65}
-    .container{max-width:980px;margin:0 auto;padding:24px 20px 72px}
-    nav{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-bottom:16px;border-bottom:1px solid var(--border);margin-bottom:28px}
-    a{color:var(--blue)} nav a{text-decoration:none;color:var(--muted);font-size:14px} nav a.brand{color:var(--text);font-weight:700}
-    h1{font-size:clamp(26px,4vw,38px);margin:0 0 12px} .lead{color:var(--muted);font-size:17px;margin-bottom:24px}
-    .table-wrap{overflow-x:auto;background:var(--surface);border:1px solid var(--border);border-radius:12px;margin-bottom:28px}
-    table{width:100%;border-collapse:collapse;font-size:14px} th,td{padding:12px 14px;border-bottom:1px solid var(--border);text-align:left} th{background:var(--surface-alt);color:var(--muted)}
-    .card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px;margin-bottom:18px}
-  </style>
 </head>
 <body>
-  <div class="container">
-    <nav>
-      <a class="brand" href="./">← Frontend Frameworks (2026)</a>
-      <div style="display:flex;gap:14px;flex-wrap:wrap">
+  <header class="site-nav">
+    <div class="container site-nav__inner">
+      <a class="brand" href="./">javascript-frontend</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="./">All frameworks</a>
+        <a href="react-vs-vue.html" aria-current="page">React vs Vue</a>
         <a href="react-vs-svelte.html">React vs Svelte</a>
         <a href="react-vs-angular.html">React vs Angular</a>
         <a href="best-frontend-framework-for-seo.html">Best for SEO</a>
         <a href="https://github.com/javascript-frontend/frontend-frameworks">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-banner">
+      <div class="container">
+        <h1>React 19 vs Vue 3.5 in 2026.</h1>
+        <p class="lead">Verified adoption metrics, reactivity models, and identical Sprint Task Tracker line counts.</p>
       </div>
-    </nav>
-    <h1>React vs Vue (2026): Which Should You Pick?</h1>
-    <p class="lead">Verified head-to-head comparison of React 19.3.1 and Vue 3.5.45 based on live GitHub &amp; npm metrics (2026-11-16) and identical Sprint Task Tracker implementations.</p>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Dimension</th><th>React 19.3.1</th><th>Vue 3.5.45</th></tr></thead>
-        <tbody>
-          <tr><td>GitHub Stars</td><td>252,661 (<code>facebook/react</code>)</td><td>55,029 (<code>vuejs/core</code>; legacy <code>vuejs/vue</code>: 212,519)</td></tr>
-          <tr><td>npm Weekly Downloads</td><td>260,880,973</td><td>25,213,072</td></tr>
-          <tr><td>Template Language</td><td>JSX / TSX</td><td>HTML Single-File Components (<code>.vue</code>)</td></tr>
-          <tr><td>Reactivity Model</td><td>Hooks + React Compiler</td><td>Proxy Composition API (<code>ref</code>, <code>computed</code>)</td></tr>
-          <tr><td>Full-Stack Meta-Framework</td><td>Next.js 16 / React Router 8</td><td>Nuxt 4.6</td></tr>
-          <tr><td>Same App LOC</td><td>82 lines</td><td>76 lines</td></tr>
-        </tbody>
-      </table>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Compare verified metrics side by side.</h2>
+          <p>Data verified on 2026-11-16 from GitHub and npm registries.</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Dimension</th>
+                <th>React 19.3.1</th>
+                <th>Vue 3.5.45</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>GitHub stars</td>
+                <td class="measured">252,661 (facebook/react)</td>
+                <td class="measured">55,029 (vuejs/core; legacy vuejs/vue: 212,519)</td>
+              </tr>
+              <tr>
+                <td>npm weekly downloads</td>
+                <td class="measured">260,880,973</td>
+                <td class="measured">25,213,072</td>
+              </tr>
+              <tr>
+                <td>Template language</td>
+                <td>JSX and TSX</td>
+                <td>HTML single-file components (.vue)</td>
+              </tr>
+              <tr>
+                <td>Reactivity model</td>
+                <td>Hooks and React Compiler</td>
+                <td>Proxy Composition API (ref, computed)</td>
+              </tr>
+              <tr>
+                <td>Full-stack meta-framework</td>
+                <td>Next.js 16 or React Router 8</td>
+                <td>Nuxt 4.6</td>
+              </tr>
+              <tr>
+                <td>Identical app LOC</td>
+                <td class="measured">82 lines</td>
+                <td class="measured">76 lines</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--band">
+      <div class="container">
+        <div class="section__head">
+          <h2>Choose by team priority.</h2>
+          <p>Both frameworks power production SaaS apps; the right pick depends on hiring and template preference.</p>
+        </div>
+        <div class="panels-grid">
+          <article>
+            <h3>When React 19 wins</h3>
+            <p class="muted-copy">Pick React 19 for maximum hiring reach, third-party AI and UI ecosystems (Radix, shadcn/ui, TanStack), and Next.js full-stack conventions.</p>
+          </article>
+          <article>
+            <h3>When Vue 3.5 wins</h3>
+            <p class="muted-copy">Pick Vue 3.5 for cohesive first-party tooling (Vue Router, Pinia, Nuxt 4), clear HTML single-file components, and fast team onboarding.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <a class="site-footer__wordmark" href="./">javascript-frontend/frontend-frameworks</a>
+        <div class="footer-links">
+          <a href="react-vs-svelte.html">React vs Svelte</a>
+          <a href="react-vs-angular.html">React vs Angular</a>
+          <a href="best-frontend-framework-for-seo.html">Best for SEO</a>
+          <a href="https://github.com/javascript-frontend/frontend-frameworks">GitHub repository</a>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>Data verified 2026-11-16</span>
+        <span>MIT License</span>
+      </div>
     </div>
-    <div class="card">
-      <h2>Bottom Line</h2>
-      <p>Pick <strong>React 19</strong> for maximum ecosystem reach, AI/SaaS tooling, and hiring velocity. Pick <strong>Vue 3.5</strong> for cohesive first-party tooling, cleaner HTML templates, and rapid team onboarding.</p>
-    </div>
-  </div>
+  </footer>
 </body>
 </html>

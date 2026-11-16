@@ -3,50 +3,124 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>React vs Svelte 5 (2026): Hooks vs Runes, Bundle Size &amp; Adoption</title>
+  <title>React vs Svelte 5 (2026): Hooks vs Runes, Bundle Size and Adoption</title>
   <meta name="description" content="Compare React 19.3 vs Svelte 5.57 in 2026: Virtual DOM vs compiler Runes ($state, $derived), Next.js vs SvelteKit, and identical app line counts." />
   <link rel="canonical" href="https://javascript-frontend.github.io/frontend-frameworks/react-vs-svelte.html" />
   <meta property="og:image" content="https://javascript-frontend.github.io/frontend-frameworks/assets/preview.png" />
-  <style>
-    :root { --bg:#080d1a; --surface:#111c33; --surface-alt:#182644; --border:#263554; --text:#f8fafc; --muted:#94a3b8; --blue:#38bdf8; --font-sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif; }
-    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-sans);line-height:1.65}
-    .container{max-width:980px;margin:0 auto;padding:24px 20px 72px}
-    nav{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-bottom:16px;border-bottom:1px solid var(--border);margin-bottom:28px}
-    a{color:var(--blue)} nav a{text-decoration:none;color:var(--muted);font-size:14px} nav a.brand{color:var(--text);font-weight:700}
-    h1{font-size:clamp(26px,4vw,38px);margin:0 0 12px} .lead{color:var(--muted);font-size:17px;margin-bottom:24px}
-    .table-wrap{overflow-x:auto;background:var(--surface);border:1px solid var(--border);border-radius:12px;margin-bottom:28px}
-    table{width:100%;border-collapse:collapse;font-size:14px} th,td{padding:12px 14px;border-bottom:1px solid var(--border);text-align:left} th{background:var(--surface-alt);color:var(--muted)}
-    .card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px}
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500&family=Atkinson+Hyperlegible+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/site.css" />
 </head>
 <body>
-  <div class="container">
-    <nav>
-      <a class="brand" href="./">← Frontend Frameworks (2026)</a>
-      <div style="display:flex;gap:14px;flex-wrap:wrap">
+  <header class="site-nav">
+    <div class="container site-nav__inner">
+      <a class="brand" href="./">javascript-frontend</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="./">All frameworks</a>
         <a href="react-vs-vue.html">React vs Vue</a>
+        <a href="react-vs-svelte.html" aria-current="page">React vs Svelte</a>
         <a href="react-vs-angular.html">React vs Angular</a>
-        <a href="lightweight-frontend-frameworks.html">Lightweight Frameworks</a>
+        <a href="lightweight-frontend-frameworks.html">Lightweight</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-banner">
+      <div class="container">
+        <h1>React 19 vs Svelte 5 in 2026.</h1>
+        <p class="lead">Svelte 5 Runes bring explicit signals alongside React 19 Hooks.</p>
       </div>
-    </nav>
-    <h1>React 19 vs Svelte 5 (2026 Comparison)</h1>
-    <p class="lead">Svelte 5 Runes bring fine-grained signals into a compiler-first SFC, competing directly with React 19's Hooks and Virtual DOM.</p>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Metric</th><th>React 19.3.1</th><th>Svelte 5.57.3</th></tr></thead>
-        <tbody>
-          <tr><td>GitHub Stars</td><td>252,661</td><td>88,785</td></tr>
-          <tr><td>npm Weekly Downloads</td><td>260,880,973</td><td>9,766,604</td></tr>
-          <tr><td>Reactivity</td><td>Hooks (<code>useState</code>, <code>useMemo</code>)</td><td>Runes (<code>$state</code>, <code>$derived</code>, <code>$effect</code>)</td></tr>
-          <tr><td>Runtime Footprint</td><td>Medium (~45 KB min+gz)</td><td>Tiny (~3–5 KB overhead)</td></tr>
-          <tr><td>Full-Stack Meta-Framework</td><td>Next.js 16 / React Router 8</td><td>SvelteKit 3.2</td></tr>
-        </tbody>
-      </table>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Compare runtime and compiler models.</h2>
+          <p>Live numbers verified on 2026-11-16 from GitHub and npm.</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Metric</th>
+                <th>React 19.3.1</th>
+                <th>Svelte 5.57.3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>GitHub stars</td>
+                <td class="measured">252,661</td>
+                <td class="measured">88,785</td>
+              </tr>
+              <tr>
+                <td>npm weekly downloads</td>
+                <td class="measured">260,880,973</td>
+                <td class="measured">9,766,604</td>
+              </tr>
+              <tr>
+                <td>Reactivity</td>
+                <td>Hooks (useState, useMemo)</td>
+                <td>Runes ($state, $derived, $effect)</td>
+              </tr>
+              <tr>
+                <td>Runtime footprint</td>
+                <td>Medium (~45 KB min+gz)</td>
+                <td>Tiny (~3 to 5 KB overhead)</td>
+              </tr>
+              <tr>
+                <td>Full-stack meta-framework</td>
+                <td>Next.js 16 or React Router 8</td>
+                <td>SvelteKit 3.2</td>
+              </tr>
+              <tr>
+                <td>Identical app LOC</td>
+                <td class="measured">82 lines</td>
+                <td class="measured">77 lines</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--band">
+      <div class="container">
+        <div class="section__head">
+          <h2>When Svelte 5 wins over React 19.</h2>
+          <p>Trade ecosystem breadth for small client bundles and low boilerplate.</p>
+        </div>
+        <div class="panels-grid">
+          <article>
+            <h3>Pick Svelte 5</h3>
+            <p class="muted-copy">Choose Svelte 5 for lean client bundles, zero Virtual DOM overhead, fewer re-render pitfalls, and cohesive SvelteKit full-stack delivery.</p>
+          </article>
+          <article>
+            <h3>Pick React 19</h3>
+            <p class="muted-copy">Choose React 19 when your team relies on React-specific libraries, multi-vendor design systems, or large hiring pools.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <a class="site-footer__wordmark" href="./">javascript-frontend/frontend-frameworks</a>
+        <div class="footer-links">
+          <a href="react-vs-vue.html">React vs Vue</a>
+          <a href="react-vs-angular.html">React vs Angular</a>
+          <a href="lightweight-frontend-frameworks.html">Lightweight frameworks</a>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>Data verified 2026-11-16</span>
+        <span>MIT License</span>
+      </div>
     </div>
-    <div class="card">
-      <h2>When Svelte 5 Wins vs. React 19</h2>
-      <p>Choose <strong>Svelte 5</strong> for lean bundles, fewer re-render footguns, and fast indie/product iteration. Choose <strong>React 19</strong> when you rely on React-only libraries or enterprise hiring scale.</p>
-    </div>
-  </div>
+  </footer>
 </body>
 </html>
