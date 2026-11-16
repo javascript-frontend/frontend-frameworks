@@ -1,9 +1,11 @@
-docs/* linguist-documentation
-guides/* linguist-documentation
-tests/* linguist-vendored
-assets/* linguist-vendored
-scripts/* linguist-detectable=false
-*.py linguist-detectable=false
+docs/** linguist-documentation
+guides/** linguist-documentation
+examples/** linguist-documentation=false
+tests/** linguist-vendored
+assets/** linguist-vendored
+scripts/** linguist-vendored
+framework_advisor.py linguist-vendored
+*.py linguist-vendored
 *.html linguist-detectable=false
 *.json linguist-detectable=false
 *.md linguist-documentation
