@@ -105,6 +105,10 @@ class TestFrontendFrameworksRepo(unittest.TestCase):
         for rel in starters:
             pkg = json.loads((ROOT / rel).read_text(encoding="utf-8"))
             self.assertIn("dependencies", pkg)
+            starter_dir = (ROOT / rel).parent
+            self.assertTrue((starter_dir / "tsconfig.json").is_file(), f"Missing tsconfig.json in {starter_dir}")
+            if "vite" in pkg.get("devDependencies", {}):
+                self.assertTrue((starter_dir / "vite.config.ts").is_file(), f"Missing vite.config.ts in {starter_dir}")
 
     def test_seo_and_geo_files(self) -> None:
         self.assertTrue((ROOT / "llms.txt").is_file())
@@ -113,6 +117,10 @@ class TestFrontendFrameworksRepo(unittest.TestCase):
         self.assertTrue((ROOT / "docs" / "assets" / "preview.png").is_file())
         sitemap = (ROOT / "docs" / "sitemap.xml").read_text(encoding="utf-8")
         for html in (ROOT / "docs").glob("*.html"):
+            content = html.read_text(encoding="utf-8")
+            self.assertNotIn('style="', content, f"Unexpected inline style in {html.name}")
+            self.assertIn('property="og:title"', content, f"Missing og:title in {html.name}")
+            self.assertIn('property="og:description"', content, f"Missing og:description in {html.name}")
             if html.name == "index.html":
                 self.assertIn("https://javascript-frontend.github.io/frontend-frameworks/</loc>", sitemap)
             else:

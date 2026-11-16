@@ -105,8 +105,8 @@
             <span class="panel__title">Live npm and GitHub ledger</span>
             <time class="measured panel__meta" datetime="2026-11-16">2026-11-16</time>
           </div>
-          <div class="table-wrap" style="border:none;border-radius:0;">
-            <table style="min-width:460px;">
+          <div class="table-wrap table-wrap--flush">
+            <table class="table--compact">
               <thead>
                 <tr>
                   <th>Framework</th>
@@ -291,14 +291,14 @@
         </div>
 
         <div class="seg-tabs" id="codeTabs" role="tablist" aria-label="Framework code implementations">
-          <button class="tab-btn active" type="button" role="tab" aria-selected="true" data-fw="react">React 19 (82 lines)</button>
-          <button class="tab-btn" type="button" role="tab" aria-selected="false" data-fw="vue">Vue 3.5 (76 lines)</button>
-          <button class="tab-btn" type="button" role="tab" aria-selected="false" data-fw="svelte">Svelte 5 (77 lines)</button>
-          <button class="tab-btn" type="button" role="tab" aria-selected="false" data-fw="angular">Angular 22 (93 lines)</button>
-          <button class="tab-btn" type="button" role="tab" aria-selected="false" data-fw="solid">SolidJS 1.9 (88 lines)</button>
+          <button class="tab-btn active" id="tab-react" type="button" role="tab" aria-selected="true" aria-controls="codePanel" tabindex="0" data-fw="react">React 19 (82 lines)</button>
+          <button class="tab-btn" id="tab-vue" type="button" role="tab" aria-selected="false" aria-controls="codePanel" tabindex="-1" data-fw="vue">Vue 3.5 (76 lines)</button>
+          <button class="tab-btn" id="tab-svelte" type="button" role="tab" aria-selected="false" aria-controls="codePanel" tabindex="-1" data-fw="svelte">Svelte 5 (77 lines)</button>
+          <button class="tab-btn" id="tab-angular" type="button" role="tab" aria-selected="false" aria-controls="codePanel" tabindex="-1" data-fw="angular">Angular 22 (93 lines)</button>
+          <button class="tab-btn" id="tab-solid" type="button" role="tab" aria-selected="false" aria-controls="codePanel" tabindex="-1" data-fw="solid">SolidJS 1.9 (88 lines)</button>
         </div>
 
-        <div class="panel">
+        <div class="panel" id="codePanel" role="tabpanel" aria-labelledby="tab-react">
           <div class="panel__head">
             <span class="panel__title" id="codeFileLabel">examples/same-app-task-tracker/react/App.tsx</span>
             <a class="btn btn--sm" href="https://github.com/javascript-frontend/frontend-frameworks/tree/main/examples/same-app-task-tracker">View full folder</a>
@@ -448,9 +448,15 @@ const remaining = useMemo(() =&gt; tasks.filter(t =&gt; !t.done).length, [tasks]
         if (fw.category === "meta-framework") { score += 12; reasons.push("Built-in SSR/SSG"); }
       }
       if (lowB && /zero js|tiny/i.test(fw.runtime_tier || "")) { score += 22; reasons.push("Minimal client JS"); }
-      if (lowC && /very low|^low$/i.test(fw.learning_curve || "")) { score += 15; reasons.push("Fast onboarding"); }
+      if (lowC) {
+        const curve = (fw.learning_curve || "").toLowerCase();
+        if (curve.includes("very low")) { score += 18; reasons.push("Minimal boilerplate"); }
+        else if (curve === "low") { score += 12; reasons.push("Fast onboarding"); }
+      }
       if (fw.npm_weekly_downloads >= 50e6) score += 8;
       else if (fw.npm_weekly_downloads >= 10e6) score += 5;
+      else if (fw.npm_weekly_downloads >= 1e6) score += 2;
+      if (fw.starter_path) score += 3;
       return { fw, score, reasons };
     }
 
@@ -526,13 +532,26 @@ const remaining = useMemo(() =&gt; tasks.filter(t =&gt; !t.done).length, [tasks]
         const active = b.dataset.fw === fw;
         b.classList.toggle("active", active);
         b.setAttribute("aria-selected", String(active));
+        b.tabIndex = active ? 0 : -1;
       });
+      const panel = document.getElementById("codePanel");
+      if (panel) panel.setAttribute("aria-labelledby", `tab-${fw}`);
       const entry = CODE_SNIPPETS[fw];
       document.getElementById("codeFileLabel").textContent = entry.file;
       document.getElementById("codeViewer").textContent = `${entry.code}\n\n// Full runnable source: ${FULL_EXAMPLES_URL}/${fw}`;
     }
 
-    document.querySelectorAll("#codeTabs .tab-btn").forEach((btn) => btn.addEventListener("click", () => setCodeTab(btn.dataset.fw)));
+    const tabButtons = Array.from(document.querySelectorAll("#codeTabs .tab-btn"));
+    tabButtons.forEach((btn, idx) => {
+      btn.addEventListener("click", () => setCodeTab(btn.dataset.fw));
+      btn.addEventListener("keydown", (e) => {
+        if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+        e.preventDefault();
+        const next = tabButtons[(idx + (e.key === "ArrowRight" ? 1 : tabButtons.length - 1)) % tabButtons.length];
+        setCodeTab(next.dataset.fw);
+        next.focus();
+      });
+    });
     ["useCase", "seoCritical", "lowBundle", "lowCurve"].forEach((id) => document.getElementById(id).addEventListener("change", renderSelector));
     ["searchBox", "catFilter", "sortBy"].forEach((id) => document.getElementById(id).addEventListener("input", renderTable));
 

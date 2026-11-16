@@ -366,24 +366,6 @@
   font-size: var(--text-sm);
 }
 
-.chip {
-  display: inline-flex;
-  align-items: center;
-  padding: var(--space-2xs) var(--space-xs);
-  border-radius: var(--space-2xs);
-  border: var(--rule-hair) solid var(--color-rule-2);
-  background: var(--color-cool-soft);
-  color: var(--color-cool);
-  font-size: var(--text-xs);
-  font-weight: 500;
-  white-space: nowrap;
-}
-
-.chip--ok {
-  background: var(--color-ok-soft);
-  color: var(--color-ok);
-}
-
 /* Tables (Console hairline rules) */
 .table-controls {
   display: flex;
@@ -406,11 +388,20 @@
   border-radius: var(--radius-card);
 }
 
+.table-wrap--flush {
+  border: none;
+  border-radius: 0;
+}
+
 table {
   width: 100%;
   min-width: 720px;
   border-collapse: collapse;
   font-size: var(--text-sm);
+}
+
+.table--compact {
+  min-width: 0;
 }
 
 th,
@@ -455,10 +446,6 @@ th.num {
   text-align: right;
   font-family: var(--font-outlier);
   font-variant-numeric: tabular-nums slashed-zero;
-}
-
-.row--highlight td {
-  background: var(--color-ok-soft);
 }
 
 /* Code switcher */
