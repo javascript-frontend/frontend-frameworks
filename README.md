@@ -4,6 +4,7 @@
 
 **An actively maintained, data-verified comparison of 15 leading frontend frameworks and meta-frameworks — featuring live GitHub & npm adoption metrics, a scenario-based framework selector, the exact same app built in 5 frameworks, and free MIT starter templates.**
 
+[![CI Verification](https://github.com/javascript-frontend/frontend-frameworks/actions/workflows/ci.yml/badge.svg)](https://github.com/javascript-frontend/frontend-frameworks/actions/workflows/ci.yml)
 [![Verified Frameworks](https://img.shields.io/badge/Verified_Frameworks-15_Active-10b981?style=flat-square)](#-complete-frontend-frameworks-comparison-table-2026)
 [![Data Verified](https://img.shields.io/badge/Metrics_Verified-2026--11--16-3b82f6?style=flat-square)](guides/methodology-and-data-sources.md)
 [![Same App Examples](https://img.shields.io/badge/Same_App_Code-5_Frameworks-f59e0b?style=flat-square)](#-same-app-across-5-frameworks-sprint-task-tracker)
