@@ -7,7 +7,7 @@
   <meta name="description" content="Compare React 19.3 vs Svelte 5.57 in 2026: Virtual DOM vs compiler Runes ($state, $derived), Next.js vs SvelteKit, and identical app line counts." />
   <link rel="canonical" href="https://javascript-frontend.github.io/frontend-frameworks/react-vs-svelte.html" />
   <meta property="og:title" content="React vs Svelte 5 (2026): Hooks vs Runes, Bundle Size and Adoption" />
-  <meta property="og:description" content="Compare React 19.3 vs Svelte 5.57 in 2026: Virtual DOM vs compiler Runes, Next.js vs SvelteKit, and identical app line counts." />
+  <meta property="og:description" content="Compare React 19.3 vs Svelte 5.57 in 2026: Virtual DOM vs compiler Runes ($state, $derived), Next.js vs SvelteKit, and identical app line counts." />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://javascript-frontend.github.io/frontend-frameworks/react-vs-svelte.html" />
   <meta property="og:image" content="https://javascript-frontend.github.io/frontend-frameworks/assets/preview.png" />
@@ -16,6 +16,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500&family=Atkinson+Hyperlegible+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles/site.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Svelte 5 faster than React 19?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Svelte 5 compiles templates into direct DOM updates with a 3 to 5 KB runtime overhead and no Virtual DOM diffing, making initial bundles smaller than React 19."
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body>
   <header class="site-nav">
@@ -23,10 +39,11 @@
       <a class="brand" href="./">javascript-frontend</a>
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="./">All frameworks</a>
+        <a href="comparisons.html">Directory</a>
         <a href="react-vs-vue.html">React vs Vue</a>
         <a href="react-vs-svelte.html" aria-current="page">React vs Svelte</a>
-        <a href="react-vs-angular.html">React vs Angular</a>
-        <a href="lightweight-frontend-frameworks.html">Lightweight</a>
+        <a href="best-frontend-framework-for-seo.html">Best for SEO</a>
+        <a href="https://github.com/javascript-frontend/frontend-frameworks">GitHub</a>
       </nav>
     </div>
   </header>
@@ -42,48 +59,53 @@
     <section class="section">
       <div class="container">
         <div class="section__head">
-          <h2>Compare runtime and compiler models.</h2>
-          <p>Live numbers verified on 2026-11-16 from GitHub and npm.</p>
+          <h2>Compare verified metrics side by side.</h2>
+          <p>Data verified on 2026-11-16 from GitHub and npm registries.</p>
         </div>
         <div class="table-wrap">
-          <table>
+          <table class="table-responsive">
             <thead>
               <tr>
-                <th>Metric</th>
+                <th>Dimension</th>
                 <th>React 19.3.1</th>
                 <th>Svelte 5.57.3</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>GitHub stars</td>
-                <td class="measured">252,661</td>
-                <td class="measured">88,785</td>
+                <td data-label="Dimension">GitHub stars</td>
+                <td data-label="React 19.3.1" class="measured">252,661</td>
+                <td data-label="Svelte 5.57.3" class="measured">88,785</td>
               </tr>
               <tr>
-                <td>npm weekly downloads</td>
-                <td class="measured">260,880,973</td>
-                <td class="measured">9,766,604</td>
+                <td data-label="Dimension">npm weekly downloads</td>
+                <td data-label="React 19.3.1" class="measured">260,880,973</td>
+                <td data-label="Svelte 5.57.3" class="measured">9,766,604</td>
               </tr>
               <tr>
-                <td>Reactivity</td>
-                <td>Hooks (useState, useMemo)</td>
-                <td>Runes ($state, $derived, $effect)</td>
+                <td data-label="Dimension">Rendering model</td>
+                <td data-label="React 19.3.1">Virtual DOM + Fiber + React Compiler</td>
+                <td data-label="Svelte 5.57.3">Compiled Fine-Grained DOM Updates</td>
               </tr>
               <tr>
-                <td>Runtime footprint</td>
-                <td>Medium (~45 KB min+gz)</td>
-                <td>Tiny (~3 to 5 KB overhead)</td>
+                <td data-label="Dimension">Reactivity</td>
+                <td data-label="React 19.3.1">Hooks + Server Components</td>
+                <td data-label="Svelte 5.57.3">Svelte 5 Runes ($state, $derived, $effect)</td>
               </tr>
               <tr>
-                <td>Full-stack meta-framework</td>
-                <td>Next.js 16 or React Router 8</td>
-                <td>SvelteKit 3.2</td>
+                <td data-label="Dimension">Runtime tier</td>
+                <td data-label="React 19.3.1">Medium (~45 KB min+gz with react-dom)</td>
+                <td data-label="Svelte 5.57.3">Tiny (~3-5 KB runtime overhead)</td>
               </tr>
               <tr>
-                <td>Identical app LOC</td>
-                <td class="measured">82 lines</td>
-                <td class="measured">77 lines</td>
+                <td data-label="Dimension">Server SEO score</td>
+                <td data-label="React 19.3.1" class="measured">4/5</td>
+                <td data-label="Svelte 5.57.3" class="measured">5/5</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Identical app LOC</td>
+                <td data-label="React 19.3.1" class="measured">82 lines</td>
+                <td data-label="Svelte 5.57.3" class="measured">77 lines</td>
               </tr>
             </tbody>
           </table>
@@ -94,18 +116,62 @@
     <section class="section section--band">
       <div class="container">
         <div class="section__head">
-          <h2>When Svelte 5 wins over React 19.</h2>
-          <p>Trade ecosystem breadth for small client bundles and low boilerplate.</p>
+          <h2>Choose by project constraint.</h2>
+          <p>Match framework strengths to team hiring, runtime budget, and rendering architecture.</p>
         </div>
-        <div class="panels-grid">
+        <div class="panels-grid panels-grid--3">
           <article>
-            <h3>Pick Svelte 5</h3>
+            <h3>When React wins</h3>
+            <p class="muted-copy">Choose React 19 when your team relies on React-specific libraries, multi-vendor design systems, or large hiring pools.</p>
+          </article>
+          <article>
+            <h3>When Svelte wins</h3>
             <p class="muted-copy">Choose Svelte 5 for lean client bundles, zero Virtual DOM overhead, fewer re-render pitfalls, and cohesive SvelteKit full-stack delivery.</p>
           </article>
           <article>
-            <h3>Pick React 19</h3>
-            <p class="muted-copy">Choose React 19 when your team relies on React-specific libraries, multi-vendor design systems, or large hiring pools.</p>
+            <h3>Compare via CLI</h3>
+            <p class="muted-copy">Inspect both frameworks in your terminal or inspect the identical Sprint Task Tracker implementations.</p>
+            <div class="cmd-box">
+              <code>node src/advisor.ts --compare react svelte</code>
+            </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Related comparisons.</h2>
+          <p>Explore neighboring frameworks or jump back to the interactive selector.</p>
+        </div>
+        <div class="faq-list">
+          <article class="faq-item">
+            <h3>Is Svelte 5 faster than React 19?</h3>
+            <p>Svelte 5 compiles templates into direct DOM updates with a 3 to 5 KB runtime overhead and no Virtual DOM diffing, making initial bundles smaller than React 19.</p>
+          </article>
+        </div>
+        <div class="index-rows">
+          <a class="index-row" href="react-vs-vue.html">
+            <span class="index-row__title">React 19 vs Vue 3.5 in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="react-vs-angular.html">
+            <span class="index-row__title">React 19 vs Angular 22 in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="svelte-vs-solidjs.html">
+            <span class="index-row__title">Svelte 5 vs SolidJS 1.9 in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="lightweight-frontend-frameworks.html">
+            <span class="index-row__title">Lightweight frontend frameworks in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
         </div>
       </div>
     </section>
@@ -114,11 +180,14 @@
   <footer class="site-footer">
     <div class="container">
       <div class="site-footer__top">
-        <a class="site-footer__wordmark" href="./">javascript-frontend/frontend-frameworks</a>
+        <a class="site-footer__wordmark" href="./">javascript-frontend</a>
         <div class="footer-links">
-          <a href="react-vs-vue.html">React vs Vue</a>
-          <a href="react-vs-angular.html">React vs Angular</a>
-          <a href="lightweight-frontend-frameworks.html">Lightweight frameworks</a>
+          <a href="react-vs-vue.html">React 19 vs Vue 3.5 in 2026</a>
+          <a href="react-vs-angular.html">React 19 vs Angular 22 in 2026</a>
+          <a href="svelte-vs-solidjs.html">Svelte 5 vs SolidJS 1.9 in 2026</a>
+          <a href="lightweight-frontend-frameworks.html">Lightweight frontend frameworks in 2026</a>
+          <a href="comparisons.html">All comparisons</a>
+          <a href="https://github.com/javascript-frontend/frontend-frameworks">GitHub repository</a>
         </div>
       </div>
       <div class="site-footer__bottom">

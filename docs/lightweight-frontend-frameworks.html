@@ -23,9 +23,11 @@
       <a class="brand" href="./">javascript-frontend</a>
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="./">All frameworks</a>
+        <a href="comparisons.html">Directory</a>
+        <a href="react-vs-vue.html">React vs Vue</a>
         <a href="react-vs-svelte.html">React vs Svelte</a>
         <a href="best-frontend-framework-for-seo.html">Best for SEO</a>
-        <a href="lightweight-frontend-frameworks.html" aria-current="page">Lightweight</a>
+        <a href="https://github.com/javascript-frontend/frontend-frameworks">GitHub</a>
       </nav>
     </div>
   </header>
@@ -41,62 +43,62 @@
     <section class="section">
       <div class="container">
         <div class="section__head">
-          <h2>Compare minimal runtime sizes.</h2>
-          <p>Verified versions and weekly npm adoption as of 2026-11-16.</p>
+          <h2>Top frameworks ranked by fit.</h2>
+          <p>Verified versions and weekly npm downloads as of 2026-11-16.</p>
         </div>
         <div class="table-wrap">
-          <table>
+          <table class="table-responsive">
             <thead>
               <tr>
                 <th>Framework</th>
                 <th>Latest</th>
                 <th class="num">npm weekly</th>
-                <th>Runtime tier</th>
-                <th>Best use case</th>
+                <th>Rendering model</th>
+                <th>Why it fits</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Preact</td>
-                <td class="measured">11.2.0</td>
-                <td class="num">59.0M</td>
-                <td>~4 KB min+gz</td>
-                <td>React-compatible widgets and fast storefronts</td>
+                <td data-label="Framework"><a href="https://preactjs.com/" target="_blank" rel="noopener">Preact</a></td>
+                <td data-label="Latest" class="measured">11.2.0</td>
+                <td data-label="npm weekly" class="num">59.0M</td>
+                <td data-label="Rendering model">Lightweight Virtual DOM</td>
+                <td data-label="Why it fits">~4 KB min+gz; React-compatible widgets and fast storefronts.</td>
               </tr>
               <tr>
-                <td>SolidJS</td>
-                <td class="measured">1.9.19</td>
-                <td class="num">11.7M</td>
-                <td>~7 KB min+gz</td>
-                <td>High-frequency UI updates and real-time dashboards</td>
+                <td data-label="Framework"><a href="https://www.solidjs.com/" target="_blank" rel="noopener">SolidJS</a></td>
+                <td data-label="Latest" class="measured">1.9.19</td>
+                <td data-label="npm weekly" class="num">11.7M</td>
+                <td data-label="Rendering model">No Virtual DOM (Compiled JSX + Fine-Grained DOM)</td>
+                <td data-label="Why it fits">~7 KB min+gz; high-frequency UI updates and real-time dashboards.</td>
               </tr>
               <tr>
-                <td>Lit</td>
-                <td class="measured">3.3.3</td>
-                <td class="num">9.8M</td>
-                <td>~5 KB min+gz</td>
-                <td>Cross-framework Web Components design systems</td>
+                <td data-label="Framework"><a href="https://lit.dev/" target="_blank" rel="noopener">Lit</a></td>
+                <td data-label="Latest" class="measured">3.3.3</td>
+                <td data-label="npm weekly" class="num">9.8M</td>
+                <td data-label="Rendering model">Native Web Components + lit-html Templates</td>
+                <td data-label="Why it fits">~5 KB min+gz; cross-framework Web Components design systems.</td>
               </tr>
               <tr>
-                <td>Svelte</td>
-                <td class="measured">5.57.3</td>
-                <td class="num">9.8M</td>
-                <td>~3 to 5 KB overhead</td>
-                <td>Full SPAs and SvelteKit apps with tiny bundles</td>
+                <td data-label="Framework"><a href="https://svelte.dev/" target="_blank" rel="noopener">Svelte</a></td>
+                <td data-label="Latest" class="measured">5.57.3</td>
+                <td data-label="npm weekly" class="num">9.8M</td>
+                <td data-label="Rendering model">Compiled Fine-Grained DOM Updates</td>
+                <td data-label="Why it fits">~3 to 5 KB overhead; full SPAs and SvelteKit apps with tiny bundles.</td>
               </tr>
               <tr>
-                <td>Alpine.js</td>
-                <td class="measured">3.17.5</td>
-                <td class="num">931.1K</td>
-                <td>~15 KB, no build</td>
-                <td>Progressive enhancement on Rails, Django, Laravel</td>
+                <td data-label="Framework"><a href="https://alpinejs.dev/" target="_blank" rel="noopener">Alpine.js</a></td>
+                <td data-label="Latest" class="measured">3.17.5</td>
+                <td data-label="npm weekly" class="num">931.1K</td>
+                <td data-label="Rendering model">Direct HTML Attribute Enhancement</td>
+                <td data-label="Why it fits">~15 KB, no build; progressive enhancement on Rails, Django, Laravel.</td>
               </tr>
               <tr>
-                <td>htmx</td>
-                <td class="measured">2.0.11</td>
-                <td class="num">456.0K</td>
-                <td>~14 KB, no build</td>
-                <td>Server-driven HTML partials without JSON SPAs</td>
+                <td data-label="Framework"><a href="https://htmx.org/" target="_blank" rel="noopener">htmx</a></td>
+                <td data-label="Latest" class="measured">2.0.11</td>
+                <td data-label="npm weekly" class="num">456.0K</td>
+                <td data-label="Rendering model">Hypermedia / Server HTML Swapping</td>
+                <td data-label="Why it fits">~14 KB, no build; server-driven HTML partials without JSON SPAs.</td>
               </tr>
             </tbody>
           </table>
@@ -107,10 +109,10 @@
     <section class="section section--band">
       <div class="container">
         <div class="section__head">
-          <h2>Match bundle strategy to architecture.</h2>
-          <p>Avoid a full SPA runtime when widgets or server templates cover your interaction needs.</p>
+          <h2>Architecture guidelines.</h2>
+          <p>Choose rendering strategy and client bundle boundaries early.</p>
         </div>
-        <div class="panels-grid">
+        <div class="panels-grid panels-grid--3">
           <article>
             <h3>Client SPAs and islands</h3>
             <p class="muted-copy">Pick Preact, SolidJS, or Svelte 5 when you need rich client state with a minimal bundle budget.</p>
@@ -119,6 +121,44 @@
             <h3>Zero-build server HTML</h3>
             <p class="muted-copy">Pick Alpine.js or htmx when Rails, Django, Laravel, or Go templates already render your pages.</p>
           </article>
+          <article>
+            <h3>Run CLI advisor</h3>
+            <p class="muted-copy">Score all 15 verified frameworks locally with zero dependencies.</p>
+            <div class="cmd-box">
+              <code>node src/advisor.ts --use-case saas-dashboard --seo-critical</code>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Related comparisons.</h2>
+          <p>Explore neighboring frameworks or jump back to the interactive selector.</p>
+        </div>
+        <div class="index-rows">
+          <a class="index-row" href="react-vs-svelte.html">
+            <span class="index-row__title">React 19 vs Svelte 5 in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="best-frontend-framework-for-seo.html">
+            <span class="index-row__title">Best frontend frameworks for SEO</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="svelte-vs-solidjs.html">
+            <span class="index-row__title">Svelte 5 vs SolidJS 1.9 in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="alpinejs-vs-htmx.html">
+            <span class="index-row__title">Alpine.js 3 vs htmx in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
         </div>
       </div>
     </section>
@@ -127,10 +167,14 @@
   <footer class="site-footer">
     <div class="container">
       <div class="site-footer__top">
-        <a class="site-footer__wordmark" href="./">javascript-frontend/frontend-frameworks</a>
+        <a class="site-footer__wordmark" href="./">javascript-frontend</a>
         <div class="footer-links">
-          <a href="react-vs-svelte.html">React vs Svelte</a>
-          <a href="best-frontend-framework-for-seo.html">Best for SEO</a>
+          <a href="react-vs-svelte.html">React 19 vs Svelte 5 in 2026</a>
+          <a href="best-frontend-framework-for-seo.html">Best frontend frameworks for SEO</a>
+          <a href="svelte-vs-solidjs.html">Svelte 5 vs SolidJS 1.9 in 2026</a>
+          <a href="alpinejs-vs-htmx.html">Alpine.js 3 vs htmx in 2026</a>
+          <a href="comparisons.html">All comparisons</a>
+          <a href="https://github.com/javascript-frontend/frontend-frameworks">GitHub repository</a>
         </div>
       </div>
       <div class="site-footer__bottom">

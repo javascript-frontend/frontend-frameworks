@@ -7,7 +7,7 @@
   <meta name="description" content="Ranking the best frontend frameworks for Google SEO and AI search in 2026: Astro 7 Islands, Next.js 16, Nuxt 4, SvelteKit 3, and Qwik resumability." />
   <link rel="canonical" href="https://javascript-frontend.github.io/frontend-frameworks/best-frontend-framework-for-seo.html" />
   <meta property="og:title" content="Best Frontend Frameworks for SEO and Core Web Vitals (2026)" />
-  <meta property="og:description" content="Ranking the best frontend frameworks for Google SEO and AI search in 2026: Astro 7 Islands, Next.js 16, Nuxt 4, SvelteKit 3, and Qwik." />
+  <meta property="og:description" content="Ranking the best frontend frameworks for Google SEO and AI search in 2026: Astro 7 Islands, Next.js 16, Nuxt 4, SvelteKit 3, and Qwik resumability." />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://javascript-frontend.github.io/frontend-frameworks/best-frontend-framework-for-seo.html" />
   <meta property="og:image" content="https://javascript-frontend.github.io/frontend-frameworks/assets/preview.png" />
@@ -23,9 +23,11 @@
       <a class="brand" href="./">javascript-frontend</a>
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="./">All frameworks</a>
+        <a href="comparisons.html">Directory</a>
         <a href="react-vs-vue.html">React vs Vue</a>
+        <a href="react-vs-svelte.html">React vs Svelte</a>
         <a href="best-frontend-framework-for-seo.html" aria-current="page">Best for SEO</a>
-        <a href="lightweight-frontend-frameworks.html">Lightweight</a>
+        <a href="https://github.com/javascript-frontend/frontend-frameworks">GitHub</a>
       </nav>
     </div>
   </header>
@@ -41,49 +43,55 @@
     <section class="section">
       <div class="container">
         <div class="section__head">
-          <h2>Rank SSR and zero-JS options.</h2>
-          <p>Versions verified on 2026-11-16 across Astro, Next.js, Nuxt, SvelteKit, and Qwik.</p>
+          <h2>Top frameworks ranked by fit.</h2>
+          <p>Verified versions and weekly npm downloads as of 2026-11-16.</p>
         </div>
         <div class="table-wrap">
-          <table>
+          <table class="table-responsive">
             <thead>
               <tr>
                 <th>Framework</th>
-                <th>Version</th>
-                <th>Rendering strategy</th>
-                <th>Ideal SEO workload</th>
+                <th>Latest</th>
+                <th class="num">npm weekly</th>
+                <th>Rendering model</th>
+                <th>Why it fits</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Astro</td>
-                <td class="measured">7.4.12</td>
-                <td>Zero-JS static and Islands</td>
-                <td>Content sites, docs, blogs, programmatic SEO</td>
+                <td data-label="Framework"><a href="https://astro.build/" target="_blank" rel="noopener">Astro</a></td>
+                <td data-label="Latest" class="measured">7.4.12</td>
+                <td data-label="npm weekly" class="num">12.0M</td>
+                <td data-label="Rendering model">Islands Architecture (Zero JS by default)</td>
+                <td data-label="Why it fits">Zero-JS static and Islands for content sites, docs, blogs, and programmatic SEO.</td>
               </tr>
               <tr>
-                <td>Next.js</td>
-                <td class="measured">16.4.6</td>
-                <td>SSR, SSG, React Server Components</td>
-                <td>Dynamic SaaS marketing and e-commerce</td>
+                <td data-label="Framework"><a href="https://nextjs.org/" target="_blank" rel="noopener">Next.js</a></td>
+                <td data-label="Latest" class="measured">16.4.6</td>
+                <td data-label="npm weekly" class="num">94.4M</td>
+                <td data-label="Rendering model">SSR + SSG + React Server Components (RSC)</td>
+                <td data-label="Why it fits">SSR, SSG, and React Server Components for dynamic SaaS and e-commerce.</td>
               </tr>
               <tr>
-                <td>Nuxt</td>
-                <td class="measured">4.6.4</td>
-                <td>Hybrid SSR and SSG (Nitro)</td>
-                <td>Vue-based SEO storefronts and portals</td>
+                <td data-label="Framework"><a href="https://nuxt.com/" target="_blank" rel="noopener">Nuxt</a></td>
+                <td data-label="Latest" class="measured">4.6.4</td>
+                <td data-label="npm weekly" class="num">3.4M</td>
+                <td data-label="Rendering model">Hybrid SSR / SSG / Edge (Nitro)</td>
+                <td data-label="Why it fits">Hybrid SSR and SSG (Nitro) for Vue-based SEO storefronts and portals.</td>
               </tr>
               <tr>
-                <td>SvelteKit</td>
-                <td class="measured">3.2.0</td>
-                <td>SSR, prerender, progressive forms</td>
-                <td>Fast interactive web apps needing SSR</td>
+                <td data-label="Framework"><a href="https://svelte.dev/docs/kit" target="_blank" rel="noopener">SvelteKit</a></td>
+                <td data-label="Latest" class="measured">3.2.0</td>
+                <td data-label="npm weekly" class="num">5.3M</td>
+                <td data-label="Rendering model">SSR + Prerendering + Progressive Enhancement</td>
+                <td data-label="Why it fits">SSR, prerender, and progressive forms for fast interactive web apps.</td>
               </tr>
               <tr>
-                <td>Qwik</td>
-                <td class="measured">1.20.4</td>
-                <td>Resumability (zero hydration)</td>
-                <td>Large interactive e-commerce catalogs</td>
+                <td data-label="Framework"><a href="https://qwik.dev/" target="_blank" rel="noopener">Qwik</a></td>
+                <td data-label="Latest" class="measured">1.20.4</td>
+                <td data-label="npm weekly" class="num">61.3K</td>
+                <td data-label="Rendering model">Resumability (Zero-Hydration Lazy Execution)</td>
+                <td data-label="Why it fits">Resumability (zero hydration) for large interactive e-commerce catalogs.</td>
               </tr>
             </tbody>
           </table>
@@ -94,10 +102,10 @@
     <section class="section section--band">
       <div class="container">
         <div class="section__head">
-          <h2>Split public pages from logged-in apps.</h2>
-          <p>Keep marketing pages fast with zero-JS HTML while dashboards stay decoupled.</p>
+          <h2>Architecture guidelines.</h2>
+          <p>Choose rendering strategy and client bundle boundaries early.</p>
         </div>
-        <div class="panels-grid">
+        <div class="panels-grid panels-grid--3">
           <article>
             <h3>Public marketing and docs</h3>
             <p class="muted-copy">Use Astro 7 or static prerendering so Googlebot and AI crawlers receive complete semantic HTML with minimal client script.</p>
@@ -106,6 +114,44 @@
             <h3>Dynamic catalogs and SaaS</h3>
             <p class="muted-copy">Use Next.js 16, Nuxt 4, or SvelteKit 3 when product availability, user pricing, or per-request metadata must stream from the server.</p>
           </article>
+          <article>
+            <h3>Run CLI advisor</h3>
+            <p class="muted-copy">Score all 15 verified frameworks locally with zero dependencies.</p>
+            <div class="cmd-box">
+              <code>node src/advisor.ts --use-case saas-dashboard --seo-critical</code>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Related comparisons.</h2>
+          <p>Explore neighboring frameworks or jump back to the interactive selector.</p>
+        </div>
+        <div class="index-rows">
+          <a class="index-row" href="react-vs-vue.html">
+            <span class="index-row__title">React 19 vs Vue 3.5 in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="lightweight-frontend-frameworks.html">
+            <span class="index-row__title">Lightweight frontend frameworks in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="nextjs-vs-astro.html">
+            <span class="index-row__title">Next.js 16 vs Astro 7 in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="astro-vs-qwik.html">
+            <span class="index-row__title">Astro 7 vs Qwik 1.20 in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
         </div>
       </div>
     </section>
@@ -114,10 +160,14 @@
   <footer class="site-footer">
     <div class="container">
       <div class="site-footer__top">
-        <a class="site-footer__wordmark" href="./">javascript-frontend/frontend-frameworks</a>
+        <a class="site-footer__wordmark" href="./">javascript-frontend</a>
         <div class="footer-links">
-          <a href="react-vs-vue.html">React vs Vue</a>
-          <a href="lightweight-frontend-frameworks.html">Lightweight frameworks</a>
+          <a href="react-vs-vue.html">React 19 vs Vue 3.5 in 2026</a>
+          <a href="lightweight-frontend-frameworks.html">Lightweight frontend frameworks in 2026</a>
+          <a href="nextjs-vs-astro.html">Next.js 16 vs Astro 7 in 2026</a>
+          <a href="astro-vs-qwik.html">Astro 7 vs Qwik 1.20 in 2026</a>
+          <a href="comparisons.html">All comparisons</a>
+          <a href="https://github.com/javascript-frontend/frontend-frameworks">GitHub repository</a>
         </div>
       </div>
       <div class="site-footer__bottom">

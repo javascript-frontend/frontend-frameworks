@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Next.js vs React Router (2026): RSC App Router vs Web Standards SSR</title>
+  <meta name="description" content="Compare Next.js 16.4 vs React Router 8.5 (formerly Remix) in 2026: loaders and actions vs React Server Components, Vite support, and lock-in." />
+  <link rel="canonical" href="https://javascript-frontend.github.io/frontend-frameworks/nextjs-vs-react-router.html" />
+  <meta property="og:title" content="Next.js vs React Router (2026): RSC App Router vs Web Standards SSR" />
+  <meta property="og:description" content="Compare Next.js 16.4 vs React Router 8.5 (formerly Remix) in 2026: loaders and actions vs React Server Components, Vite support, and lock-in." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://javascript-frontend.github.io/frontend-frameworks/nextjs-vs-react-router.html" />
+  <meta property="og:image" content="https://javascript-frontend.github.io/frontend-frameworks/assets/preview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500&family=Atkinson+Hyperlegible+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/site.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What happened to Remix vs Next.js in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Remix merged its full-stack framework capabilities into React Router (now v8.5.1), offering Vite-based SSR, SPA, and nested data loaders as a direct alternative to Next.js."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="site-nav">
+    <div class="container site-nav__inner">
+      <a class="brand" href="./">javascript-frontend</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="./">All frameworks</a>
+        <a href="comparisons.html">Directory</a>
+        <a href="react-vs-vue.html">React vs Vue</a>
+        <a href="react-vs-svelte.html">React vs Svelte</a>
+        <a href="best-frontend-framework-for-seo.html">Best for SEO</a>
+        <a href="https://github.com/javascript-frontend/frontend-frameworks">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-banner">
+      <div class="container">
+        <h1>Next.js 16 vs React Router 8.</h1>
+        <p class="lead">Comparing the two leading full-stack React frameworks on routing, Vite, and SSR.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Compare verified metrics side by side.</h2>
+          <p>Data verified on 2026-11-16 from GitHub and npm registries.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="table-responsive">
+            <thead>
+              <tr>
+                <th>Dimension</th>
+                <th>Next.js 16.4.6</th>
+                <th>React Router 8.5.1</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Dimension">GitHub stars</td>
+                <td data-label="Next.js 16.4.6" class="measured">143,582</td>
+                <td data-label="React Router 8.5.1" class="measured">56,637</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">npm weekly downloads</td>
+                <td data-label="Next.js 16.4.6" class="measured">94,442,807</td>
+                <td data-label="React Router 8.5.1" class="measured">76,914,486</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Rendering model</td>
+                <td data-label="Next.js 16.4.6">SSR + SSG + React Server Components (RSC)</td>
+                <td data-label="React Router 8.5.1">SSR / SPA / Data Loaders &amp; Actions</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Reactivity</td>
+                <td data-label="Next.js 16.4.6">React 19 + App Router</td>
+                <td data-label="React Router 8.5.1">React 19 + Web Standard Request/Response</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Runtime tier</td>
+                <td data-label="Next.js 16.4.6">Full-stack React</td>
+                <td data-label="React Router 8.5.1">Flexible React SSR/SPA</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Server SEO score</td>
+                <td data-label="Next.js 16.4.6" class="measured">5/5</td>
+                <td data-label="React Router 8.5.1" class="measured">5/5</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--band">
+      <div class="container">
+        <div class="section__head">
+          <h2>Choose by project constraint.</h2>
+          <p>Match framework strengths to team hiring, runtime budget, and rendering architecture.</p>
+        </div>
+        <div class="panels-grid panels-grid--3">
+          <article>
+            <h3>When Next.js wins</h3>
+            <p class="muted-copy">Pick Next.js 16 for built-in image/font optimization, React Server Components, and managed edge caching.</p>
+          </article>
+          <article>
+            <h3>When React Router wins</h3>
+            <p class="muted-copy">Pick React Router 8 for standard Web Fetch loaders/actions, native Vite speed, and portable Node or Cloudflare hosting.</p>
+          </article>
+          <article>
+            <h3>Compare via CLI</h3>
+            <p class="muted-copy">Inspect both frameworks in your terminal or inspect the identical Sprint Task Tracker implementations.</p>
+            <div class="cmd-box">
+              <code>node src/advisor.ts --compare nextjs react-router</code>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Related comparisons.</h2>
+          <p>Explore neighboring frameworks or jump back to the interactive selector.</p>
+        </div>
+        <div class="faq-list">
+          <article class="faq-item">
+            <h3>What happened to Remix vs Next.js in 2026?</h3>
+            <p>Remix merged its full-stack framework capabilities into React Router (now v8.5.1), offering Vite-based SSR, SPA, and nested data loaders as a direct alternative to Next.js.</p>
+          </article>
+        </div>
+        <div class="index-rows">
+          <a class="index-row" href="react-vs-nextjs.html">
+            <span class="index-row__title">React 19 vs Next.js 16 in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="nextjs-alternatives.html">
+            <span class="index-row__title">Best Next.js alternatives in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="react-alternatives.html">
+            <span class="index-row__title">Best React alternatives in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="best-frontend-framework-for-saas.html">
+            <span class="index-row__title">Best frontend frameworks for SaaS</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <a class="site-footer__wordmark" href="./">javascript-frontend</a>
+        <div class="footer-links">
+          <a href="react-vs-nextjs.html">React 19 vs Next.js 16 in 2026</a>
+          <a href="nextjs-alternatives.html">Best Next.js alternatives in 2026</a>
+          <a href="react-alternatives.html">Best React alternatives in 2026</a>
+          <a href="best-frontend-framework-for-saas.html">Best frontend frameworks for SaaS</a>
+          <a href="comparisons.html">All comparisons</a>
+          <a href="https://github.com/javascript-frontend/frontend-frameworks">GitHub repository</a>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>Data verified 2026-11-16</span>
+        <span>MIT License</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

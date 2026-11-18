@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Svelte 5 vs SolidJS (2026): Runes SFC vs Compiled Signal JSX</title>
+  <meta name="description" content="Compare Svelte 5.57 vs SolidJS 1.9 in 2026: fine-grained reactivity without Virtual DOM, bundle overhead, and template style." />
+  <link rel="canonical" href="https://javascript-frontend.github.io/frontend-frameworks/svelte-vs-solidjs.html" />
+  <meta property="og:title" content="Svelte 5 vs SolidJS (2026): Runes SFC vs Compiled Signal JSX" />
+  <meta property="og:description" content="Compare Svelte 5.57 vs SolidJS 1.9 in 2026: fine-grained reactivity without Virtual DOM, bundle overhead, and template style." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://javascript-frontend.github.io/frontend-frameworks/svelte-vs-solidjs.html" />
+  <meta property="og:image" content="https://javascript-frontend.github.io/frontend-frameworks/assets/preview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500&family=Atkinson+Hyperlegible+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/site.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which has a smaller learning curve for React developers: Svelte 5 or SolidJS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SolidJS keeps familiar JSX syntax, though React developers must unlearn component re-execution; Svelte 5 uses HTML templates with explicit $state and $derived runes."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="site-nav">
+    <div class="container site-nav__inner">
+      <a class="brand" href="./">javascript-frontend</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="./">All frameworks</a>
+        <a href="comparisons.html">Directory</a>
+        <a href="react-vs-vue.html">React vs Vue</a>
+        <a href="react-vs-svelte.html">React vs Svelte</a>
+        <a href="best-frontend-framework-for-seo.html">Best for SEO</a>
+        <a href="https://github.com/javascript-frontend/frontend-frameworks">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-banner">
+      <div class="container">
+        <h1>Svelte 5 vs SolidJS 1.9 in 2026.</h1>
+        <p class="lead">Two zero-VDOM reactive compilers compared on syntax, bundle size, and tooling.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Compare verified metrics side by side.</h2>
+          <p>Data verified on 2026-11-16 from GitHub and npm registries.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="table-responsive">
+            <thead>
+              <tr>
+                <th>Dimension</th>
+                <th>Svelte 5.57.3</th>
+                <th>SolidJS 1.9.19</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Dimension">GitHub stars</td>
+                <td data-label="Svelte 5.57.3" class="measured">88,785</td>
+                <td data-label="SolidJS 1.9.19" class="measured">36,273</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">npm weekly downloads</td>
+                <td data-label="Svelte 5.57.3" class="measured">9,766,604</td>
+                <td data-label="SolidJS 1.9.19" class="measured">11,735,361</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Rendering model</td>
+                <td data-label="Svelte 5.57.3">Compiled Fine-Grained DOM Updates</td>
+                <td data-label="SolidJS 1.9.19">No Virtual DOM (Compiled JSX + Fine-Grained DOM)</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Reactivity</td>
+                <td data-label="Svelte 5.57.3">Svelte 5 Runes ($state, $derived, $effect)</td>
+                <td data-label="SolidJS 1.9.19">Fine-grained Signals (createSignal, createMemo)</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Runtime tier</td>
+                <td data-label="Svelte 5.57.3">Tiny (~3-5 KB runtime overhead)</td>
+                <td data-label="SolidJS 1.9.19">Tiny (~7 KB min+gz)</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Server SEO score</td>
+                <td data-label="Svelte 5.57.3" class="measured">5/5</td>
+                <td data-label="SolidJS 1.9.19" class="measured">4/5</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Identical app LOC</td>
+                <td data-label="Svelte 5.57.3" class="measured">77 lines</td>
+                <td data-label="SolidJS 1.9.19" class="measured">88 lines</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--band">
+      <div class="container">
+        <div class="section__head">
+          <h2>Choose by project constraint.</h2>
+          <p>Match framework strengths to team hiring, runtime budget, and rendering architecture.</p>
+        </div>
+        <div class="panels-grid panels-grid--3">
+          <article>
+            <h3>When Svelte wins</h3>
+            <p class="muted-copy">Pick Svelte 5 for HTML single-file components, scoped CSS, and a mature full-stack framework in SvelteKit 3.</p>
+          </article>
+          <article>
+            <h3>When SolidJS wins</h3>
+            <p class="muted-copy">Pick SolidJS if your team prefers TypeScript JSX and predictable signal getter semantics without compiler magic.</p>
+          </article>
+          <article>
+            <h3>Compare via CLI</h3>
+            <p class="muted-copy">Inspect both frameworks in your terminal or inspect the identical Sprint Task Tracker implementations.</p>
+            <div class="cmd-box">
+              <code>node src/advisor.ts --compare svelte solid</code>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Related comparisons.</h2>
+          <p>Explore neighboring frameworks or jump back to the interactive selector.</p>
+        </div>
+        <div class="faq-list">
+          <article class="faq-item">
+            <h3>Which has a smaller learning curve for React developers: Svelte 5 or SolidJS?</h3>
+            <p>SolidJS keeps familiar JSX syntax, though React developers must unlearn component re-execution; Svelte 5 uses HTML templates with explicit $state and $derived runes.</p>
+          </article>
+        </div>
+        <div class="index-rows">
+          <a class="index-row" href="react-vs-solidjs.html">
+            <span class="index-row__title">React 19 vs SolidJS 1.9 in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="react-vs-svelte.html">
+            <span class="index-row__title">React 19 vs Svelte 5 in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="vue-vs-svelte.html">
+            <span class="index-row__title">Vue 3.5 vs Svelte 5 in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="lightweight-frontend-frameworks.html">
+            <span class="index-row__title">Lightweight frontend frameworks in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <a class="site-footer__wordmark" href="./">javascript-frontend</a>
+        <div class="footer-links">
+          <a href="react-vs-solidjs.html">React 19 vs SolidJS 1.9 in 2026</a>
+          <a href="react-vs-svelte.html">React 19 vs Svelte 5 in 2026</a>
+          <a href="vue-vs-svelte.html">Vue 3.5 vs Svelte 5 in 2026</a>
+          <a href="lightweight-frontend-frameworks.html">Lightweight frontend frameworks in 2026</a>
+          <a href="comparisons.html">All comparisons</a>
+          <a href="https://github.com/javascript-frontend/frontend-frameworks">GitHub repository</a>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>Data verified 2026-11-16</span>
+        <span>MIT License</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

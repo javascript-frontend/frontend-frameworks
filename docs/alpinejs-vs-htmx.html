@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alpine.js vs htmx (2026): Client Directives vs Hypermedia HTML</title>
+  <meta name="description" content="Compare Alpine.js 3.17 vs htmx 2.0 in 2026: zero-build client state vs server HTML partials for Django, Rails, Laravel, and Go." />
+  <link rel="canonical" href="https://javascript-frontend.github.io/frontend-frameworks/alpinejs-vs-htmx.html" />
+  <meta property="og:title" content="Alpine.js vs htmx (2026): Client Directives vs Hypermedia HTML" />
+  <meta property="og:description" content="Compare Alpine.js 3.17 vs htmx 2.0 in 2026: zero-build client state vs server HTML partials for Django, Rails, Laravel, and Go." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://javascript-frontend.github.io/frontend-frameworks/alpinejs-vs-htmx.html" />
+  <meta property="og:image" content="https://javascript-frontend.github.io/frontend-frameworks/assets/preview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500&family=Atkinson+Hyperlegible+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/site.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can Alpine.js and htmx be used together?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Many Rails, Django, Laravel, and Go teams pair htmx for server HTML updates with Alpine.js for lightweight client UI state."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="site-nav">
+    <div class="container site-nav__inner">
+      <a class="brand" href="./">javascript-frontend</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="./">All frameworks</a>
+        <a href="comparisons.html">Directory</a>
+        <a href="react-vs-vue.html">React vs Vue</a>
+        <a href="react-vs-svelte.html">React vs Svelte</a>
+        <a href="best-frontend-framework-for-seo.html">Best for SEO</a>
+        <a href="https://github.com/javascript-frontend/frontend-frameworks">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-banner">
+      <div class="container">
+        <h1>Alpine.js 3 vs htmx in 2026.</h1>
+        <p class="lead">Two zero-build libraries that enhance server-rendered HTML without a JavaScript SPA.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Compare verified metrics side by side.</h2>
+          <p>Data verified on 2026-11-16 from GitHub and npm registries.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="table-responsive">
+            <thead>
+              <tr>
+                <th>Dimension</th>
+                <th>Alpine.js 3.17.5</th>
+                <th>htmx 2.0.11</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Dimension">GitHub stars</td>
+                <td data-label="Alpine.js 3.17.5" class="measured">32,021</td>
+                <td data-label="htmx 2.0.11" class="measured">49,644</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">npm weekly downloads</td>
+                <td data-label="Alpine.js 3.17.5" class="measured">931,149</td>
+                <td data-label="htmx 2.0.11" class="measured">455,954</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Rendering model</td>
+                <td data-label="Alpine.js 3.17.5">Direct HTML Attribute Enhancement</td>
+                <td data-label="htmx 2.0.11">Hypermedia / Server HTML Swapping</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Reactivity</td>
+                <td data-label="Alpine.js 3.17.5">Reactive HTML directives (x-data, x-model)</td>
+                <td data-label="htmx 2.0.11">HTML attributes (hx-get, hx-post, hx-swap)</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Runtime tier</td>
+                <td data-label="Alpine.js 3.17.5">Tiny (~15 KB min+gz, zero build step)</td>
+                <td data-label="htmx 2.0.11">Tiny (~14 KB min+gz, zero build step)</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Server SEO score</td>
+                <td data-label="Alpine.js 3.17.5" class="measured">5/5</td>
+                <td data-label="htmx 2.0.11" class="measured">5/5</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--band">
+      <div class="container">
+        <div class="section__head">
+          <h2>Choose by project constraint.</h2>
+          <p>Match framework strengths to team hiring, runtime budget, and rendering architecture.</p>
+        </div>
+        <div class="panels-grid panels-grid--3">
+          <article>
+            <h3>When Alpine.js wins</h3>
+            <p class="muted-copy">Pick Alpine.js for local UI state like dropdowns, modals, tabs, and client toggles directly inside HTML.</p>
+          </article>
+          <article>
+            <h3>When htmx wins</h3>
+            <p class="muted-copy">Pick htmx to fetch and swap server-rendered HTML fragments over AJAX using declarative attributes.</p>
+          </article>
+          <article>
+            <h3>Compare via CLI</h3>
+            <p class="muted-copy">Inspect both frameworks in your terminal or inspect the identical Sprint Task Tracker implementations.</p>
+            <div class="cmd-box">
+              <code>node src/advisor.ts --compare alpine htmx</code>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Related comparisons.</h2>
+          <p>Explore neighboring frameworks or jump back to the interactive selector.</p>
+        </div>
+        <div class="faq-list">
+          <article class="faq-item">
+            <h3>Can Alpine.js and htmx be used together?</h3>
+            <p>Yes. Many Rails, Django, Laravel, and Go teams pair htmx for server HTML updates with Alpine.js for lightweight client UI state.</p>
+          </article>
+        </div>
+        <div class="index-rows">
+          <a class="index-row" href="htmx-vs-react.html">
+            <span class="index-row__title">htmx vs React 19 in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="lightweight-frontend-frameworks.html">
+            <span class="index-row__title">Lightweight frontend frameworks in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="jquery-alternatives.html">
+            <span class="index-row__title">Best jQuery alternatives in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="htmx-alternatives.html">
+            <span class="index-row__title">Best htmx alternatives in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <a class="site-footer__wordmark" href="./">javascript-frontend</a>
+        <div class="footer-links">
+          <a href="htmx-vs-react.html">htmx vs React 19 in 2026</a>
+          <a href="lightweight-frontend-frameworks.html">Lightweight frontend frameworks in 2026</a>
+          <a href="jquery-alternatives.html">Best jQuery alternatives in 2026</a>
+          <a href="htmx-alternatives.html">Best htmx alternatives in 2026</a>
+          <a href="comparisons.html">All comparisons</a>
+          <a href="https://github.com/javascript-frontend/frontend-frameworks">GitHub repository</a>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>Data verified 2026-11-16</span>
+        <span>MIT License</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

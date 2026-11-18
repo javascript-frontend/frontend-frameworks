@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>React vs Vue (2026): Adoption, Syntax, Ecosystem and Performance</title>
-  <meta name="description" content="React 19.3 vs Vue 3.5 in 2026: compare 260.9M vs 25.2M weekly npm downloads, Hooks vs Composition API, Next.js vs Nuxt 4, and which fits your team." />
+  <meta name="description" content="React 19.3 vs Vue 3.5 in 2026: compare 260.9M vs 25.2M weekly npm downloads, Hooks vs Composition API, and Next.js vs Nuxt 4." />
   <link rel="canonical" href="https://javascript-frontend.github.io/frontend-frameworks/react-vs-vue.html" />
   <meta property="og:title" content="React vs Vue (2026): Adoption, Syntax, Ecosystem and Performance" />
   <meta property="og:description" content="React 19.3 vs Vue 3.5 in 2026: compare 260.9M vs 25.2M weekly npm downloads, Hooks vs Composition API, and Next.js vs Nuxt 4." />
@@ -17,15 +17,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500&family=Atkinson+Hyperlegible+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles/site.css" />
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [{
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
       "@type": "Question",
       "name": "Should I choose React or Vue in 2026?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Choose React 19 if hiring pool, third-party UI libraries, and Next.js ecosystem breadth matter most. Choose Vue 3.5 if you want cleaner single-file components, faster onboarding, and official first-party routing and state via Vue Router, Pinia, and Nuxt 4." }
-    }]
-  }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Choose React 19 if hiring pool, third-party UI libraries, and Next.js ecosystem breadth matter most. Choose Vue 3.5 if you want cleaner single-file components, faster onboarding, and official first-party routing and state via Vue Router, Pinia, and Nuxt 4."
+      }
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -34,9 +39,9 @@
       <a class="brand" href="./">javascript-frontend</a>
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="./">All frameworks</a>
+        <a href="comparisons.html">Directory</a>
         <a href="react-vs-vue.html" aria-current="page">React vs Vue</a>
         <a href="react-vs-svelte.html">React vs Svelte</a>
-        <a href="react-vs-angular.html">React vs Angular</a>
         <a href="best-frontend-framework-for-seo.html">Best for SEO</a>
         <a href="https://github.com/javascript-frontend/frontend-frameworks">GitHub</a>
       </nav>
@@ -58,7 +63,7 @@
           <p>Data verified on 2026-11-16 from GitHub and npm registries.</p>
         </div>
         <div class="table-wrap">
-          <table>
+          <table class="table-responsive">
             <thead>
               <tr>
                 <th>Dimension</th>
@@ -68,34 +73,39 @@
             </thead>
             <tbody>
               <tr>
-                <td>GitHub stars</td>
-                <td class="measured">252,661 (facebook/react)</td>
-                <td class="measured">55,029 (vuejs/core; legacy vuejs/vue: 212,519)</td>
+                <td data-label="Dimension">GitHub stars</td>
+                <td data-label="React 19.3.1" class="measured">252,661</td>
+                <td data-label="Vue 3.5.45" class="measured">55,029 (legacy vuejs/vue: 212,519)</td>
               </tr>
               <tr>
-                <td>npm weekly downloads</td>
-                <td class="measured">260,880,973</td>
-                <td class="measured">25,213,072</td>
+                <td data-label="Dimension">npm weekly downloads</td>
+                <td data-label="React 19.3.1" class="measured">260,880,973</td>
+                <td data-label="Vue 3.5.45" class="measured">25,213,072</td>
               </tr>
               <tr>
-                <td>Template language</td>
-                <td>JSX and TSX</td>
-                <td>HTML single-file components (.vue)</td>
+                <td data-label="Dimension">Rendering model</td>
+                <td data-label="React 19.3.1">Virtual DOM + Fiber + React Compiler</td>
+                <td data-label="Vue 3.5.45">Virtual DOM + Vapor-ready Compiler</td>
               </tr>
               <tr>
-                <td>Reactivity model</td>
-                <td>Hooks and React Compiler</td>
-                <td>Proxy Composition API (ref, computed)</td>
+                <td data-label="Dimension">Reactivity</td>
+                <td data-label="React 19.3.1">Hooks + Server Components</td>
+                <td data-label="Vue 3.5.45">Proxy-based Composition API (ref/computed)</td>
               </tr>
               <tr>
-                <td>Full-stack meta-framework</td>
-                <td>Next.js 16 or React Router 8</td>
-                <td>Nuxt 4.6</td>
+                <td data-label="Dimension">Runtime tier</td>
+                <td data-label="React 19.3.1">Medium (~45 KB min+gz with react-dom)</td>
+                <td data-label="Vue 3.5.45">Small-Medium (~22 KB min+gz)</td>
               </tr>
               <tr>
-                <td>Identical app LOC</td>
-                <td class="measured">82 lines</td>
-                <td class="measured">76 lines</td>
+                <td data-label="Dimension">Server SEO score</td>
+                <td data-label="React 19.3.1" class="measured">4/5</td>
+                <td data-label="Vue 3.5.45" class="measured">4/5</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Identical app LOC</td>
+                <td data-label="React 19.3.1" class="measured">82 lines</td>
+                <td data-label="Vue 3.5.45" class="measured">76 lines</td>
               </tr>
             </tbody>
           </table>
@@ -106,18 +116,62 @@
     <section class="section section--band">
       <div class="container">
         <div class="section__head">
-          <h2>Choose by team priority.</h2>
-          <p>Both frameworks power production SaaS apps; the right pick depends on hiring and template preference.</p>
+          <h2>Choose by project constraint.</h2>
+          <p>Match framework strengths to team hiring, runtime budget, and rendering architecture.</p>
         </div>
-        <div class="panels-grid">
+        <div class="panels-grid panels-grid--3">
           <article>
-            <h3>When React 19 wins</h3>
+            <h3>When React wins</h3>
             <p class="muted-copy">Pick React 19 for maximum hiring reach, third-party AI and UI ecosystems (Radix, shadcn/ui, TanStack), and Next.js full-stack conventions.</p>
           </article>
           <article>
-            <h3>When Vue 3.5 wins</h3>
+            <h3>When Vue wins</h3>
             <p class="muted-copy">Pick Vue 3.5 for cohesive first-party tooling (Vue Router, Pinia, Nuxt 4), clear HTML single-file components, and fast team onboarding.</p>
           </article>
+          <article>
+            <h3>Compare via CLI</h3>
+            <p class="muted-copy">Inspect both frameworks in your terminal or inspect the identical Sprint Task Tracker implementations.</p>
+            <div class="cmd-box">
+              <code>node src/advisor.ts --compare react vue</code>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Related comparisons.</h2>
+          <p>Explore neighboring frameworks or jump back to the interactive selector.</p>
+        </div>
+        <div class="faq-list">
+          <article class="faq-item">
+            <h3>Should I choose React or Vue in 2026?</h3>
+            <p>Choose React 19 if hiring pool, third-party UI libraries, and Next.js ecosystem breadth matter most. Choose Vue 3.5 if you want cleaner single-file components, faster onboarding, and official first-party routing and state via Vue Router, Pinia, and Nuxt 4.</p>
+          </article>
+        </div>
+        <div class="index-rows">
+          <a class="index-row" href="react-vs-svelte.html">
+            <span class="index-row__title">React 19 vs Svelte 5 in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="react-vs-angular.html">
+            <span class="index-row__title">React 19 vs Angular 22 in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="vue-vs-svelte.html">
+            <span class="index-row__title">Vue 3.5 vs Svelte 5 in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="best-frontend-framework-for-seo.html">
+            <span class="index-row__title">Best frontend frameworks for SEO</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
         </div>
       </div>
     </section>
@@ -126,11 +180,13 @@
   <footer class="site-footer">
     <div class="container">
       <div class="site-footer__top">
-        <a class="site-footer__wordmark" href="./">javascript-frontend/frontend-frameworks</a>
+        <a class="site-footer__wordmark" href="./">javascript-frontend</a>
         <div class="footer-links">
-          <a href="react-vs-svelte.html">React vs Svelte</a>
-          <a href="react-vs-angular.html">React vs Angular</a>
-          <a href="best-frontend-framework-for-seo.html">Best for SEO</a>
+          <a href="react-vs-svelte.html">React 19 vs Svelte 5 in 2026</a>
+          <a href="react-vs-angular.html">React 19 vs Angular 22 in 2026</a>
+          <a href="vue-vs-svelte.html">Vue 3.5 vs Svelte 5 in 2026</a>
+          <a href="best-frontend-framework-for-seo.html">Best frontend frameworks for SEO</a>
+          <a href="comparisons.html">All comparisons</a>
           <a href="https://github.com/javascript-frontend/frontend-frameworks">GitHub repository</a>
         </div>
       </div>

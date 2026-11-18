@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Best jQuery Alternatives in 2026 (Alpine.js, htmx, Preact, Vue, Lit)</title>
+  <meta name="description" content="Modern 2026 replacements for jQuery: Alpine.js and htmx with zero build step, plus Preact 11, Vue 3.5, and Lit Web Components." />
+  <link rel="canonical" href="https://javascript-frontend.github.io/frontend-frameworks/jquery-alternatives.html" />
+  <meta property="og:title" content="Best jQuery Alternatives in 2026 (Alpine.js, htmx, Preact, Vue, Lit)" />
+  <meta property="og:description" content="Modern 2026 replacements for jQuery: Alpine.js and htmx with zero build step, plus Preact 11, Vue 3.5, and Lit Web Components." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://javascript-frontend.github.io/frontend-frameworks/jquery-alternatives.html" />
+  <meta property="og:image" content="https://javascript-frontend.github.io/frontend-frameworks/assets/preview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500&family=Atkinson+Hyperlegible+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/site.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the easiest drop-in replacement for jQuery without a build step?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Native browser DOM APIs cover most selectors and fetch calls; for declarative state and AJAX partials without Webpack or Vite, pair Alpine.js and htmx."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="site-nav">
+    <div class="container site-nav__inner">
+      <a class="brand" href="./">javascript-frontend</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="./">All frameworks</a>
+        <a href="comparisons.html">Directory</a>
+        <a href="react-vs-vue.html">React vs Vue</a>
+        <a href="react-vs-svelte.html">React vs Svelte</a>
+        <a href="best-frontend-framework-for-seo.html">Best for SEO</a>
+        <a href="https://github.com/javascript-frontend/frontend-frameworks">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-banner">
+      <div class="container">
+        <h1>Best jQuery alternatives in 2026.</h1>
+        <p class="lead">Zero-build HTML enhancers and lightweight libraries replacing legacy DOM scripts.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Compare verified jQuery (Legacy) alternatives.</h2>
+          <p>GitHub stars, npm adoption, and runtime tiers verified on 2026-11-16.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="table-responsive">
+            <thead>
+              <tr>
+                <th>Alternative</th>
+                <th>Latest</th>
+                <th class="num">Stars</th>
+                <th class="num">npm weekly</th>
+                <th>Runtime tier</th>
+                <th>Why teams switch</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Alternative"><a href="https://alpinejs.dev/" target="_blank" rel="noopener">Alpine.js</a></td>
+                <td data-label="Latest" class="measured">3.17.5</td>
+                <td data-label="Stars" class="num">32,021</td>
+                <td data-label="npm weekly" class="num">931.1K</td>
+                <td data-label="Runtime tier">Tiny (~15 KB min+gz, zero build step)</td>
+                <td data-label="Why teams switch">Declarative reactivity via HTML attributes with no build step.</td>
+              </tr>
+              <tr>
+                <td data-label="Alternative"><a href="https://htmx.org/" target="_blank" rel="noopener">htmx</a></td>
+                <td data-label="Latest" class="measured">2.0.11</td>
+                <td data-label="Stars" class="num">49,644</td>
+                <td data-label="npm weekly" class="num">456.0K</td>
+                <td data-label="Runtime tier">Tiny (~14 KB min+gz, zero build step)</td>
+                <td data-label="Why teams switch">AJAX HTML updates via hx-get and hx-post without manual DOM code.</td>
+              </tr>
+              <tr>
+                <td data-label="Alternative"><a href="https://preactjs.com/" target="_blank" rel="noopener">Preact</a></td>
+                <td data-label="Latest" class="measured">11.2.0</td>
+                <td data-label="Stars" class="num">39,008</td>
+                <td data-label="npm weekly" class="num">59.0M</td>
+                <td data-label="Runtime tier">Tiny (~4 KB min+gz)</td>
+                <td data-label="Why teams switch">4 KB component library when state outgrows inline DOM manipulation.</td>
+              </tr>
+              <tr>
+                <td data-label="Alternative"><a href="https://vuejs.org/" target="_blank" rel="noopener">Vue</a></td>
+                <td data-label="Latest" class="measured">3.5.45</td>
+                <td data-label="Stars" class="num">55,029</td>
+                <td data-label="npm weekly" class="num">25.2M</td>
+                <td data-label="Runtime tier">Small-Medium (~22 KB min+gz)</td>
+                <td data-label="Why teams switch">Easy progressive drop-in for legacy server apps via CDN or Vite.</td>
+              </tr>
+              <tr>
+                <td data-label="Alternative"><a href="https://lit.dev/" target="_blank" rel="noopener">Lit</a></td>
+                <td data-label="Latest" class="measured">3.3.3</td>
+                <td data-label="Stars" class="num">21,896</td>
+                <td data-label="npm weekly" class="num">9.8M</td>
+                <td data-label="Runtime tier">Tiny (~5 KB min+gz)</td>
+                <td data-label="Why teams switch">Standards-based Custom Elements for reusable cross-page widgets.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--band">
+      <div class="container">
+        <div class="section__head">
+          <h2>How to migrate cleanly.</h2>
+          <p>Test one route or widget before committing a full rewrite.</p>
+        </div>
+        <div class="panels-grid panels-grid--3">
+          <article>
+            <h3>Start with free starters</h3>
+            <p class="muted-copy">Copy minimal Vite or Astro templates from this repository and benchmark bundle size against your existing app.</p>
+          </article>
+          <article>
+            <h3>Compare identical app logic</h3>
+            <p class="muted-copy">Review our 5-framework Sprint Task Tracker examples to check real state and template ergonomics before migrating.</p>
+          </article>
+          <article>
+            <h3>Filter by workload</h3>
+            <p class="muted-copy">Rank all 15 frameworks for your constraints using the interactive selector or CLI.</p>
+            <div class="cmd-box">
+              <code>node src/advisor.ts --use-case saas-dashboard --seo-critical</code>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Related comparisons.</h2>
+          <p>Explore neighboring frameworks or jump back to the interactive selector.</p>
+        </div>
+        <div class="faq-list">
+          <article class="faq-item">
+            <h3>What is the easiest drop-in replacement for jQuery without a build step?</h3>
+            <p>Native browser DOM APIs cover most selectors and fetch calls; for declarative state and AJAX partials without Webpack or Vite, pair Alpine.js and htmx.</p>
+          </article>
+        </div>
+        <div class="index-rows">
+          <a class="index-row" href="alpinejs-vs-htmx.html">
+            <span class="index-row__title">Alpine.js 3 vs htmx in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="htmx-vs-react.html">
+            <span class="index-row__title">htmx vs React 19 in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="lightweight-frontend-frameworks.html">
+            <span class="index-row__title">Lightweight frontend frameworks in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="htmx-alternatives.html">
+            <span class="index-row__title">Best htmx alternatives in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <a class="site-footer__wordmark" href="./">javascript-frontend</a>
+        <div class="footer-links">
+          <a href="alpinejs-vs-htmx.html">Alpine.js 3 vs htmx in 2026</a>
+          <a href="htmx-vs-react.html">htmx vs React 19 in 2026</a>
+          <a href="lightweight-frontend-frameworks.html">Lightweight frontend frameworks in 2026</a>
+          <a href="htmx-alternatives.html">Best htmx alternatives in 2026</a>
+          <a href="comparisons.html">All comparisons</a>
+          <a href="https://github.com/javascript-frontend/frontend-frameworks">GitHub repository</a>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>Data verified 2026-11-16</span>
+        <span>MIT License</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

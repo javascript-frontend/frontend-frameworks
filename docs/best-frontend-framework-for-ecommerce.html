@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Best Frontend Frameworks for E-Commerce Storefronts (2026)</title>
+  <meta name="description" content="Compare the best frontend frameworks for e-commerce SEO and Core Web Vitals in 2026: Next.js 16, Astro 7, Nuxt 4, Qwik 1.20, and React Router 8." />
+  <link rel="canonical" href="https://javascript-frontend.github.io/frontend-frameworks/best-frontend-framework-for-ecommerce.html" />
+  <meta property="og:title" content="Best Frontend Frameworks for E-Commerce Storefronts (2026)" />
+  <meta property="og:description" content="Compare the best frontend frameworks for e-commerce SEO and Core Web Vitals in 2026: Next.js 16, Astro 7, Nuxt 4, Qwik 1.20, and React Router 8." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://javascript-frontend.github.io/frontend-frameworks/best-frontend-framework-for-ecommerce.html" />
+  <meta property="og:image" content="https://javascript-frontend.github.io/frontend-frameworks/assets/preview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500&family=Atkinson+Hyperlegible+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/site.css" />
+</head>
+<body>
+  <header class="site-nav">
+    <div class="container site-nav__inner">
+      <a class="brand" href="./">javascript-frontend</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="./">All frameworks</a>
+        <a href="comparisons.html">Directory</a>
+        <a href="react-vs-vue.html">React vs Vue</a>
+        <a href="react-vs-svelte.html">React vs Svelte</a>
+        <a href="best-frontend-framework-for-seo.html">Best for SEO</a>
+        <a href="https://github.com/javascript-frontend/frontend-frameworks">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-banner">
+      <div class="container">
+        <h1>Best frameworks for e-commerce.</h1>
+        <p class="lead">Balance dynamic cart state with fast LCP, INP, and product catalog SEO.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Top frameworks ranked by fit.</h2>
+          <p>Verified versions and weekly npm downloads as of 2026-11-16.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="table-responsive">
+            <thead>
+              <tr>
+                <th>Framework</th>
+                <th>Latest</th>
+                <th class="num">npm weekly</th>
+                <th>Rendering model</th>
+                <th>Why it fits</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Framework"><a href="https://nextjs.org/" target="_blank" rel="noopener">Next.js</a></td>
+                <td data-label="Latest" class="measured">16.4.6</td>
+                <td data-label="npm weekly" class="num">94.4M</td>
+                <td data-label="Rendering model">SSR + SSG + React Server Components (RSC)</td>
+                <td data-label="Why it fits">Proven commerce starter kits, streaming SSR, and React ecosystem.</td>
+              </tr>
+              <tr>
+                <td data-label="Framework"><a href="https://astro.build/" target="_blank" rel="noopener">Astro</a></td>
+                <td data-label="Latest" class="measured">7.4.12</td>
+                <td data-label="npm weekly" class="num">12.0M</td>
+                <td data-label="Rendering model">Islands Architecture (Zero JS by default)</td>
+                <td data-label="Why it fits">Zero-JS product pages with interactive cart and filter islands.</td>
+              </tr>
+              <tr>
+                <td data-label="Framework"><a href="https://nuxt.com/" target="_blank" rel="noopener">Nuxt</a></td>
+                <td data-label="Latest" class="measured">4.6.4</td>
+                <td data-label="npm weekly" class="num">3.4M</td>
+                <td data-label="Rendering model">Hybrid SSR / SSG / Edge (Nitro)</td>
+                <td data-label="Why it fits">Hybrid route caching via Nitro for Vue storefronts.</td>
+              </tr>
+              <tr>
+                <td data-label="Framework"><a href="https://qwik.dev/" target="_blank" rel="noopener">Qwik</a></td>
+                <td data-label="Latest" class="measured">1.20.4</td>
+                <td data-label="npm weekly" class="num">61.3K</td>
+                <td data-label="Rendering model">Resumability (Zero-Hydration Lazy Execution)</td>
+                <td data-label="Why it fits">Resumable hydration keeps mobile INP low on large catalogs.</td>
+              </tr>
+              <tr>
+                <td data-label="Framework"><a href="https://reactrouter.com/" target="_blank" rel="noopener">React Router</a></td>
+                <td data-label="Latest" class="measured">8.5.1</td>
+                <td data-label="npm weekly" class="num">76.9M</td>
+                <td data-label="Rendering model">SSR / SPA / Data Loaders &amp; Actions</td>
+                <td data-label="Why it fits">Fast nested loaders and progressive checkout forms on Vite.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--band">
+      <div class="container">
+        <div class="section__head">
+          <h2>Architecture guidelines.</h2>
+          <p>Choose rendering strategy and client bundle boundaries early.</p>
+        </div>
+        <div class="panels-grid panels-grid--3">
+          <article>
+            <h3>Conversion and Core Web Vitals</h3>
+            <p class="muted-copy">Shipping less client JavaScript on product detail pages directly improves mobile LCP and checkout conversion.</p>
+          </article>
+          <article>
+            <h3>Dynamic pricing and inventory</h3>
+            <p class="muted-copy">Use streaming SSR or edge caching in Next.js, Nuxt, or React Router when stock and currency change per request.</p>
+          </article>
+          <article>
+            <h3>Run CLI advisor</h3>
+            <p class="muted-copy">Score all 15 verified frameworks locally with zero dependencies.</p>
+            <div class="cmd-box">
+              <code>node src/advisor.ts --use-case saas-dashboard --seo-critical</code>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Related comparisons.</h2>
+          <p>Explore neighboring frameworks or jump back to the interactive selector.</p>
+        </div>
+        <div class="index-rows">
+          <a class="index-row" href="best-frontend-framework-for-seo.html">
+            <span class="index-row__title">Best frontend frameworks for SEO</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="astro-vs-qwik.html">
+            <span class="index-row__title">Astro 7 vs Qwik 1.20 in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="nextjs-vs-astro.html">
+            <span class="index-row__title">Next.js 16 vs Astro 7 in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="nextjs-vs-nuxt.html">
+            <span class="index-row__title">Next.js 16 vs Nuxt 4 in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <a class="site-footer__wordmark" href="./">javascript-frontend</a>
+        <div class="footer-links">
+          <a href="best-frontend-framework-for-seo.html">Best frontend frameworks for SEO</a>
+          <a href="astro-vs-qwik.html">Astro 7 vs Qwik 1.20 in 2026</a>
+          <a href="nextjs-vs-astro.html">Next.js 16 vs Astro 7 in 2026</a>
+          <a href="nextjs-vs-nuxt.html">Next.js 16 vs Nuxt 4 in 2026</a>
+          <a href="comparisons.html">All comparisons</a>
+          <a href="https://github.com/javascript-frontend/frontend-frameworks">GitHub repository</a>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>Data verified 2026-11-16</span>
+        <span>MIT License</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

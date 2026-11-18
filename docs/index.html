@@ -80,6 +80,7 @@
         <a href="#comparison">Table</a>
         <a href="#same-app">Same app</a>
         <a href="#starters">Starters</a>
+        <a href="comparisons.html">Directory</a>
         <a href="react-vs-vue.html">React vs Vue</a>
         <a href="react-vs-svelte.html">React vs Svelte</a>
         <a href="best-frontend-framework-for-seo.html">Best for SEO</a>
@@ -236,7 +237,7 @@
         </div>
 
         <div class="table-wrap">
-          <table>
+          <table class="table-responsive">
             <thead>
               <tr>
                 <th>Framework</th>
@@ -250,31 +251,31 @@
             </thead>
             <tbody id="tableBody">
               <tr>
-                <td><a href="https://react.dev/" target="_blank" rel="noopener">React</a></td>
-                <td>core-ui</td>
-                <td class="measured">19.3.1</td>
-                <td class="num">252,661</td>
-                <td class="num">260.9M</td>
-                <td>Virtual DOM, Fiber</td>
-                <td class="num">4/5</td>
+                <td data-label="Framework"><a href="https://react.dev/" target="_blank" rel="noopener">React</a></td>
+                <td data-label="Category">core-ui</td>
+                <td data-label="Latest" class="measured">19.3.1</td>
+                <td data-label="GitHub stars" class="num">252,661</td>
+                <td data-label="npm weekly" class="num">260.9M</td>
+                <td data-label="Rendering model">Virtual DOM, Fiber</td>
+                <td data-label="Server score" class="num">4/5</td>
               </tr>
               <tr>
-                <td><a href="https://nextjs.org/" target="_blank" rel="noopener">Next.js</a></td>
-                <td>meta-framework</td>
-                <td class="measured">16.4.6</td>
-                <td class="num">143,582</td>
-                <td class="num">94.4M</td>
-                <td>SSR, SSG, RSC</td>
-                <td class="num">5/5</td>
+                <td data-label="Framework"><a href="https://nextjs.org/" target="_blank" rel="noopener">Next.js</a></td>
+                <td data-label="Category">meta-framework</td>
+                <td data-label="Latest" class="measured">16.4.6</td>
+                <td data-label="GitHub stars" class="num">143,582</td>
+                <td data-label="npm weekly" class="num">94.4M</td>
+                <td data-label="Rendering model">SSR, SSG, RSC</td>
+                <td data-label="Server score" class="num">5/5</td>
               </tr>
               <tr>
-                <td><a href="https://vuejs.org/" target="_blank" rel="noopener">Vue</a></td>
-                <td>core-ui</td>
-                <td class="measured">3.5.45</td>
-                <td class="num">55,029</td>
-                <td class="num">25.2M</td>
-                <td>Virtual DOM, Proxy</td>
-                <td class="num">4/5</td>
+                <td data-label="Framework"><a href="https://vuejs.org/" target="_blank" rel="noopener">Vue</a></td>
+                <td data-label="Category">core-ui</td>
+                <td data-label="Latest" class="measured">3.5.45</td>
+                <td data-label="GitHub stars" class="num">55,029</td>
+                <td data-label="npm weekly" class="num">25.2M</td>
+                <td data-label="Rendering model">Virtual DOM, Proxy</td>
+                <td data-label="Server score" class="num">4/5</td>
               </tr>
             </tbody>
           </table>
@@ -360,29 +361,34 @@ const remaining = useMemo(() =&gt; tasks.filter(t =&gt; !t.done).length, [tasks]
 
         <div class="index-rows">
           <a class="index-row" href="react-vs-vue.html">
-            <span class="index-row__title">React vs Vue (2026)</span>
-            <span class="index-row__desc">Ecosystem scale versus SFC ergonomics.</span>
-            <span class="index-row__action">Read guide</span>
+            <span class="index-row__title">React vs Vue</span>
+            <span class="index-row__desc">Ecosystem scale vs SFC ergonomics.</span>
+            <span class="index-row__action">Read</span>
           </a>
           <a class="index-row" href="react-vs-svelte.html">
-            <span class="index-row__title">React vs Svelte 5 (2026)</span>
-            <span class="index-row__desc">Hooks and VDOM versus compiled Runes.</span>
-            <span class="index-row__action">Read guide</span>
+            <span class="index-row__title">React vs Svelte 5</span>
+            <span class="index-row__desc">Hooks vs compiled Runes.</span>
+            <span class="index-row__action">Read</span>
           </a>
           <a class="index-row" href="react-vs-angular.html">
-            <span class="index-row__title">React vs Angular 22 (2026)</span>
-            <span class="index-row__desc">UI library versus enterprise platform.</span>
-            <span class="index-row__action">Read guide</span>
+            <span class="index-row__title">React vs Angular 22</span>
+            <span class="index-row__desc">UI library vs enterprise platform.</span>
+            <span class="index-row__action">Read</span>
           </a>
           <a class="index-row" href="best-frontend-framework-for-seo.html">
-            <span class="index-row__title">Best frameworks for SEO</span>
-            <span class="index-row__desc">Astro Islands, Next.js SSR, Nuxt, SvelteKit, Qwik.</span>
-            <span class="index-row__action">Read guide</span>
+            <span class="index-row__title">Best for SEO</span>
+            <span class="index-row__desc">Astro, Next.js, Nuxt, SvelteKit, Qwik.</span>
+            <span class="index-row__action">Read</span>
           </a>
           <a class="index-row" href="lightweight-frontend-frameworks.html">
             <span class="index-row__title">Lightweight frameworks</span>
-            <span class="index-row__desc">Preact, SolidJS, Lit, Svelte, Alpine.js, htmx.</span>
-            <span class="index-row__action">Read guide</span>
+            <span class="index-row__desc">Preact, SolidJS, Lit, Alpine.js, htmx.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="comparisons.html">
+            <span class="index-row__title">All 37 comparisons and alternatives</span>
+            <span class="index-row__desc">Full directory of vs matchups and migrations.</span>
+            <span class="index-row__action">Directory</span>
           </a>
         </div>
       </div>
@@ -392,7 +398,7 @@ const remaining = useMemo(() =&gt; tasks.filter(t =&gt; !t.done).length, [tasks]
   <footer class="site-footer">
     <div class="container">
       <div class="site-footer__top">
-        <a class="site-footer__wordmark" href="./">javascript-frontend/frontend-frameworks</a>
+        <a class="site-footer__wordmark" href="./">javascript-frontend</a>
         <div class="footer-links">
           <a href="https://github.com/javascript-frontend/frontend-frameworks">GitHub repository</a>
           <a href="llms.txt">llms.txt</a>
@@ -508,16 +514,17 @@ const remaining = useMemo(() =&gt; tasks.filter(t =&gt; !t.done).length, [tasks]
       for (const f of rows) {
         const tr = document.createElement("tr");
         const cells = [
-          { node: (() => { const a = document.createElement("a"); a.href = f.official_url; a.target = "_blank"; a.rel = "noopener"; a.textContent = f.name; return a; })() },
-          { text: f.category },
-          { text: f.latest_version, cls: "measured" },
-          { text: f.stars.toLocaleString(), cls: "num" },
-          { text: fmt(f.npm_weekly_downloads), cls: "num" },
-          { text: f.rendering_model },
-          { text: `${f.ssr_seo_score}/5`, cls: "num" },
+          { label: "Framework", node: (() => { const a = document.createElement("a"); a.href = f.official_url; a.target = "_blank"; a.rel = "noopener"; a.textContent = f.name; return a; })() },
+          { label: "Category", text: f.category },
+          { label: "Latest", text: f.latest_version, cls: "measured" },
+          { label: "GitHub stars", text: f.stars.toLocaleString(), cls: "num" },
+          { label: "npm weekly", text: fmt(f.npm_weekly_downloads), cls: "num" },
+          { label: "Rendering model", text: f.rendering_model },
+          { label: "Server score", text: `${f.ssr_seo_score}/5`, cls: "num" },
         ];
         for (const c of cells) {
           const td = document.createElement("td");
+          td.dataset.label = c.label;
           if (c.cls) td.className = c.cls;
           if (c.node) td.appendChild(c.node);
           else td.textContent = c.text;

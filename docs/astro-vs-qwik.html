@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Astro vs Qwik (2026): Islands Architecture vs Resumability</title>
+  <meta name="description" content="Compare Astro 7.4 vs Qwik 1.20 in 2026: partial island hydration vs zero-hydration resumability for Core Web Vitals and SEO." />
+  <link rel="canonical" href="https://javascript-frontend.github.io/frontend-frameworks/astro-vs-qwik.html" />
+  <meta property="og:title" content="Astro vs Qwik (2026): Islands Architecture vs Resumability" />
+  <meta property="og:description" content="Compare Astro 7.4 vs Qwik 1.20 in 2026: partial island hydration vs zero-hydration resumability for Core Web Vitals and SEO." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://javascript-frontend.github.io/frontend-frameworks/astro-vs-qwik.html" />
+  <meta property="og:image" content="https://javascript-frontend.github.io/frontend-frameworks/assets/preview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500&family=Atkinson+Hyperlegible+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/site.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do Astro Islands differ from Qwik Resumability?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Astro isolates interactive components as separate islands inside static HTML, while Qwik serializes application state into HTML and lazy-loads handlers only on user interaction."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="site-nav">
+    <div class="container site-nav__inner">
+      <a class="brand" href="./">javascript-frontend</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="./">All frameworks</a>
+        <a href="comparisons.html">Directory</a>
+        <a href="react-vs-vue.html">React vs Vue</a>
+        <a href="react-vs-svelte.html">React vs Svelte</a>
+        <a href="best-frontend-framework-for-seo.html">Best for SEO</a>
+        <a href="https://github.com/javascript-frontend/frontend-frameworks">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-banner">
+      <div class="container">
+        <h1>Astro 7 vs Qwik 1.20 in 2026.</h1>
+        <p class="lead">Two architectures designed to eliminate upfront JavaScript hydration bottlenecks.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Compare verified metrics side by side.</h2>
+          <p>Data verified on 2026-11-16 from GitHub and npm registries.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="table-responsive">
+            <thead>
+              <tr>
+                <th>Dimension</th>
+                <th>Astro 7.4.12</th>
+                <th>Qwik 1.20.4</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Dimension">GitHub stars</td>
+                <td data-label="Astro 7.4.12" class="measured">63,986</td>
+                <td data-label="Qwik 1.20.4" class="measured">22,072</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">npm weekly downloads</td>
+                <td data-label="Astro 7.4.12" class="measured">11,999,151</td>
+                <td data-label="Qwik 1.20.4" class="measured">61,301</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Rendering model</td>
+                <td data-label="Astro 7.4.12">Islands Architecture (Zero JS by default)</td>
+                <td data-label="Qwik 1.20.4">Resumability (Zero-Hydration Lazy Execution)</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Reactivity</td>
+                <td data-label="Astro 7.4.12">Framework-agnostic (React/Vue/Svelte/Solid Islands)</td>
+                <td data-label="Qwik 1.20.4">Signals (useSignal, useStore)</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Runtime tier</td>
+                <td data-label="Astro 7.4.12">Zero JS baseline</td>
+                <td data-label="Qwik 1.20.4">Tiny initial JS (~1 KB bootstrap)</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Server SEO score</td>
+                <td data-label="Astro 7.4.12" class="measured">5/5</td>
+                <td data-label="Qwik 1.20.4" class="measured">5/5</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--band">
+      <div class="container">
+        <div class="section__head">
+          <h2>Choose by project constraint.</h2>
+          <p>Match framework strengths to team hiring, runtime budget, and rendering architecture.</p>
+        </div>
+        <div class="panels-grid panels-grid--3">
+          <article>
+            <h3>When Astro wins</h3>
+            <p class="muted-copy">Pick Astro 7 for content-rich sites, docs, and multi-framework islands backed by a huge 12.0M/wk ecosystem.</p>
+          </article>
+          <article>
+            <h3>When Qwik wins</h3>
+            <p class="muted-copy">Pick Qwik 1.20 when a heavily interactive application (such as a complex storefront) still demands near-zero initial JS.</p>
+          </article>
+          <article>
+            <h3>Compare via CLI</h3>
+            <p class="muted-copy">Inspect both frameworks in your terminal or inspect the identical Sprint Task Tracker implementations.</p>
+            <div class="cmd-box">
+              <code>node src/advisor.ts --compare astro qwik</code>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Related comparisons.</h2>
+          <p>Explore neighboring frameworks or jump back to the interactive selector.</p>
+        </div>
+        <div class="faq-list">
+          <article class="faq-item">
+            <h3>How do Astro Islands differ from Qwik Resumability?</h3>
+            <p>Astro isolates interactive components as separate islands inside static HTML, while Qwik serializes application state into HTML and lazy-loads handlers only on user interaction.</p>
+          </article>
+        </div>
+        <div class="index-rows">
+          <a class="index-row" href="best-frontend-framework-for-seo.html">
+            <span class="index-row__title">Best frontend frameworks for SEO</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="best-frontend-framework-for-ecommerce.html">
+            <span class="index-row__title">Best frameworks for e-commerce</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="lightweight-frontend-frameworks.html">
+            <span class="index-row__title">Lightweight frontend frameworks in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="astro-alternatives.html">
+            <span class="index-row__title">Best Astro alternatives in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <a class="site-footer__wordmark" href="./">javascript-frontend</a>
+        <div class="footer-links">
+          <a href="best-frontend-framework-for-seo.html">Best frontend frameworks for SEO</a>
+          <a href="best-frontend-framework-for-ecommerce.html">Best frameworks for e-commerce</a>
+          <a href="lightweight-frontend-frameworks.html">Lightweight frontend frameworks in 2026</a>
+          <a href="astro-alternatives.html">Best Astro alternatives in 2026</a>
+          <a href="comparisons.html">All comparisons</a>
+          <a href="https://github.com/javascript-frontend/frontend-frameworks">GitHub repository</a>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>Data verified 2026-11-16</span>
+        <span>MIT License</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>htmx vs React (2026): Server Hypermedia vs Client JSON SPA</title>
+  <meta name="description" content="Compare htmx vs React 19.3 in 2026: backend-driven HTML partials without a build step vs rich client-side state management." />
+  <link rel="canonical" href="https://javascript-frontend.github.io/frontend-frameworks/htmx-vs-react.html" />
+  <meta property="og:title" content="htmx vs React (2026): Server Hypermedia vs Client JSON SPA" />
+  <meta property="og:description" content="Compare htmx vs React 19.3 in 2026: backend-driven HTML partials without a build step vs rich client-side state management." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://javascript-frontend.github.io/frontend-frameworks/htmx-vs-react.html" />
+  <meta property="og:image" content="https://javascript-frontend.github.io/frontend-frameworks/assets/preview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500&family=Atkinson+Hyperlegible+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/site.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "When does htmx fall short compared to React?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "htmx depends on server round-trips for state updates, making React a better choice for dense client-side editors, spreadsheets, and offline-first workspaces."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="site-nav">
+    <div class="container site-nav__inner">
+      <a class="brand" href="./">javascript-frontend</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="./">All frameworks</a>
+        <a href="comparisons.html">Directory</a>
+        <a href="react-vs-vue.html">React vs Vue</a>
+        <a href="react-vs-svelte.html">React vs Svelte</a>
+        <a href="best-frontend-framework-for-seo.html">Best for SEO</a>
+        <a href="https://github.com/javascript-frontend/frontend-frameworks">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-banner">
+      <div class="container">
+        <h1>htmx vs React 19 in 2026.</h1>
+        <p class="lead">Server-rendered HTML fragments versus client-side Virtual DOM applications.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Compare verified metrics side by side.</h2>
+          <p>Data verified on 2026-11-16 from GitHub and npm registries.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="table-responsive">
+            <thead>
+              <tr>
+                <th>Dimension</th>
+                <th>htmx 2.0.11</th>
+                <th>React 19.3.1</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Dimension">GitHub stars</td>
+                <td data-label="htmx 2.0.11" class="measured">49,644</td>
+                <td data-label="React 19.3.1" class="measured">252,661</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">npm weekly downloads</td>
+                <td data-label="htmx 2.0.11" class="measured">455,954</td>
+                <td data-label="React 19.3.1" class="measured">260,880,973</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Rendering model</td>
+                <td data-label="htmx 2.0.11">Hypermedia / Server HTML Swapping</td>
+                <td data-label="React 19.3.1">Virtual DOM + Fiber + React Compiler</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Reactivity</td>
+                <td data-label="htmx 2.0.11">HTML attributes (hx-get, hx-post, hx-swap)</td>
+                <td data-label="React 19.3.1">Hooks + Server Components</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Runtime tier</td>
+                <td data-label="htmx 2.0.11">Tiny (~14 KB min+gz, zero build step)</td>
+                <td data-label="React 19.3.1">Medium (~45 KB min+gz with react-dom)</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Server SEO score</td>
+                <td data-label="htmx 2.0.11" class="measured">5/5</td>
+                <td data-label="React 19.3.1" class="measured">4/5</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--band">
+      <div class="container">
+        <div class="section__head">
+          <h2>Choose by project constraint.</h2>
+          <p>Match framework strengths to team hiring, runtime budget, and rendering architecture.</p>
+        </div>
+        <div class="panels-grid panels-grid--3">
+          <article>
+            <h3>When htmx wins</h3>
+            <p class="muted-copy">Pick htmx when your team works in Python, Go, Ruby, or PHP and wants dynamic forms and tables without maintaining a separate JS build.</p>
+          </article>
+          <article>
+            <h3>When React wins</h3>
+            <p class="muted-copy">Pick React 19 for offline-capable apps, complex client editors, drag-and-drop canvases, and rich interactive dashboards.</p>
+          </article>
+          <article>
+            <h3>Compare via CLI</h3>
+            <p class="muted-copy">Inspect both frameworks in your terminal or inspect the identical Sprint Task Tracker implementations.</p>
+            <div class="cmd-box">
+              <code>node src/advisor.ts --compare htmx react</code>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Related comparisons.</h2>
+          <p>Explore neighboring frameworks or jump back to the interactive selector.</p>
+        </div>
+        <div class="faq-list">
+          <article class="faq-item">
+            <h3>When does htmx fall short compared to React?</h3>
+            <p>htmx depends on server round-trips for state updates, making React a better choice for dense client-side editors, spreadsheets, and offline-first workspaces.</p>
+          </article>
+        </div>
+        <div class="index-rows">
+          <a class="index-row" href="alpinejs-vs-htmx.html">
+            <span class="index-row__title">Alpine.js 3 vs htmx in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="htmx-alternatives.html">
+            <span class="index-row__title">Best htmx alternatives in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="jquery-alternatives.html">
+            <span class="index-row__title">Best jQuery alternatives in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="react-alternatives.html">
+            <span class="index-row__title">Best React alternatives in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <a class="site-footer__wordmark" href="./">javascript-frontend</a>
+        <div class="footer-links">
+          <a href="alpinejs-vs-htmx.html">Alpine.js 3 vs htmx in 2026</a>
+          <a href="htmx-alternatives.html">Best htmx alternatives in 2026</a>
+          <a href="jquery-alternatives.html">Best jQuery alternatives in 2026</a>
+          <a href="react-alternatives.html">Best React alternatives in 2026</a>
+          <a href="comparisons.html">All comparisons</a>
+          <a href="https://github.com/javascript-frontend/frontend-frameworks">GitHub repository</a>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>Data verified 2026-11-16</span>
+        <span>MIT License</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

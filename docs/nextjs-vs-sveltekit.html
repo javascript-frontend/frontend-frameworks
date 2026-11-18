@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Next.js vs SvelteKit (2026): React Server Components vs Lean Svelte SSR</title>
+  <meta name="description" content="Compare Next.js 16.4 vs SvelteKit 3.2 in 2026: hydration weight, form actions, deployment adapters, and developer experience." />
+  <link rel="canonical" href="https://javascript-frontend.github.io/frontend-frameworks/nextjs-vs-sveltekit.html" />
+  <meta property="og:title" content="Next.js vs SvelteKit (2026): React Server Components vs Lean Svelte SSR" />
+  <meta property="og:description" content="Compare Next.js 16.4 vs SvelteKit 3.2 in 2026: hydration weight, form actions, deployment adapters, and developer experience." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://javascript-frontend.github.io/frontend-frameworks/nextjs-vs-sveltekit.html" />
+  <meta property="og:image" content="https://javascript-frontend.github.io/frontend-frameworks/assets/preview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500&family=Atkinson+Hyperlegible+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/site.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why do indie teams switch from Next.js to SvelteKit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Teams cite smaller client bundles, simpler mental models without Server/Client component boundaries, and straightforward Vite-based adapters."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="site-nav">
+    <div class="container site-nav__inner">
+      <a class="brand" href="./">javascript-frontend</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="./">All frameworks</a>
+        <a href="comparisons.html">Directory</a>
+        <a href="react-vs-vue.html">React vs Vue</a>
+        <a href="react-vs-svelte.html">React vs Svelte</a>
+        <a href="best-frontend-framework-for-seo.html">Best for SEO</a>
+        <a href="https://github.com/javascript-frontend/frontend-frameworks">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-banner">
+      <div class="container">
+        <h1>Next.js 16 vs SvelteKit 3 in 2026.</h1>
+        <p class="lead">Enterprise React meta-framework versus lean progressive full-stack Svelte.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Compare verified metrics side by side.</h2>
+          <p>Data verified on 2026-11-16 from GitHub and npm registries.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="table-responsive">
+            <thead>
+              <tr>
+                <th>Dimension</th>
+                <th>Next.js 16.4.6</th>
+                <th>SvelteKit 3.2.0</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Dimension">GitHub stars</td>
+                <td data-label="Next.js 16.4.6" class="measured">143,582</td>
+                <td data-label="SvelteKit 3.2.0" class="measured">20,914</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">npm weekly downloads</td>
+                <td data-label="Next.js 16.4.6" class="measured">94,442,807</td>
+                <td data-label="SvelteKit 3.2.0" class="measured">5,318,329</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Rendering model</td>
+                <td data-label="Next.js 16.4.6">SSR + SSG + React Server Components (RSC)</td>
+                <td data-label="SvelteKit 3.2.0">SSR + Prerendering + Progressive Enhancement</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Reactivity</td>
+                <td data-label="Next.js 16.4.6">React 19 + App Router</td>
+                <td data-label="SvelteKit 3.2.0">Svelte 5 Runes</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Runtime tier</td>
+                <td data-label="Next.js 16.4.6">Full-stack React</td>
+                <td data-label="SvelteKit 3.2.0">Lean Full-stack Svelte</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Server SEO score</td>
+                <td data-label="Next.js 16.4.6" class="measured">5/5</td>
+                <td data-label="SvelteKit 3.2.0" class="measured">5/5</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--band">
+      <div class="container">
+        <div class="section__head">
+          <h2>Choose by project constraint.</h2>
+          <p>Match framework strengths to team hiring, runtime budget, and rendering architecture.</p>
+        </div>
+        <div class="panels-grid panels-grid--3">
+          <article>
+            <h3>When Next.js wins</h3>
+            <p class="muted-copy">Pick Next.js 16 when hiring React engineers and relying on React-first SaaS SDKs and UI libraries.</p>
+          </article>
+          <article>
+            <h3>When SvelteKit wins</h3>
+            <p class="muted-copy">Pick SvelteKit 3 for smaller client payloads, progressive HTML form actions, and fast full-stack iteration.</p>
+          </article>
+          <article>
+            <h3>Compare via CLI</h3>
+            <p class="muted-copy">Inspect both frameworks in your terminal or inspect the identical Sprint Task Tracker implementations.</p>
+            <div class="cmd-box">
+              <code>node src/advisor.ts --compare nextjs sveltekit</code>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Related comparisons.</h2>
+          <p>Explore neighboring frameworks or jump back to the interactive selector.</p>
+        </div>
+        <div class="faq-list">
+          <article class="faq-item">
+            <h3>Why do indie teams switch from Next.js to SvelteKit?</h3>
+            <p>Teams cite smaller client bundles, simpler mental models without Server/Client component boundaries, and straightforward Vite-based adapters.</p>
+          </article>
+        </div>
+        <div class="index-rows">
+          <a class="index-row" href="react-vs-svelte.html">
+            <span class="index-row__title">React 19 vs Svelte 5 in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="nuxt-vs-sveltekit.html">
+            <span class="index-row__title">Nuxt 4 vs SvelteKit 3 in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="astro-vs-sveltekit.html">
+            <span class="index-row__title">Astro 7 vs SvelteKit 3 in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="nextjs-alternatives.html">
+            <span class="index-row__title">Best Next.js alternatives in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <a class="site-footer__wordmark" href="./">javascript-frontend</a>
+        <div class="footer-links">
+          <a href="react-vs-svelte.html">React 19 vs Svelte 5 in 2026</a>
+          <a href="nuxt-vs-sveltekit.html">Nuxt 4 vs SvelteKit 3 in 2026</a>
+          <a href="astro-vs-sveltekit.html">Astro 7 vs SvelteKit 3 in 2026</a>
+          <a href="nextjs-alternatives.html">Best Next.js alternatives in 2026</a>
+          <a href="comparisons.html">All comparisons</a>
+          <a href="https://github.com/javascript-frontend/frontend-frameworks">GitHub repository</a>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>Data verified 2026-11-16</span>
+        <span>MIT License</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

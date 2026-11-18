@@ -7,7 +7,7 @@
   <meta name="description" content="Compare React 19.3 vs Angular 22.2 in 2026: library ecosystem vs TypeScript-first platform with Signals, dependency injection, and long-term maintenance." />
   <link rel="canonical" href="https://javascript-frontend.github.io/frontend-frameworks/react-vs-angular.html" />
   <meta property="og:title" content="React vs Angular (2026): Enterprise Architecture, Signals and Adoption" />
-  <meta property="og:description" content="Compare React 19.3 vs Angular 22.2 in 2026: library ecosystem vs TypeScript-first platform with Signals and dependency injection." />
+  <meta property="og:description" content="Compare React 19.3 vs Angular 22.2 in 2026: library ecosystem vs TypeScript-first platform with Signals, dependency injection, and long-term maintenance." />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://javascript-frontend.github.io/frontend-frameworks/react-vs-angular.html" />
   <meta property="og:image" content="https://javascript-frontend.github.io/frontend-frameworks/assets/preview.png" />
@@ -16,6 +16,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500&family=Atkinson+Hyperlegible+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles/site.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Should enterprise teams choose React or Angular in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Choose Angular 22 if you want built-in dependency injection, router, forms, and strict conventions across large teams; choose React 19 for broader hiring and composable libraries."
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body>
   <header class="site-nav">
@@ -23,10 +39,11 @@
       <a class="brand" href="./">javascript-frontend</a>
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="./">All frameworks</a>
+        <a href="comparisons.html">Directory</a>
         <a href="react-vs-vue.html">React vs Vue</a>
         <a href="react-vs-svelte.html">React vs Svelte</a>
-        <a href="react-vs-angular.html" aria-current="page">React vs Angular</a>
         <a href="best-frontend-framework-for-seo.html">Best for SEO</a>
+        <a href="https://github.com/javascript-frontend/frontend-frameworks">GitHub</a>
       </nav>
     </div>
   </header>
@@ -42,43 +59,53 @@
     <section class="section">
       <div class="container">
         <div class="section__head">
-          <h2>Compare platform scope and signals.</h2>
-          <p>Live numbers verified on 2026-11-16 from GitHub and npm.</p>
+          <h2>Compare verified metrics side by side.</h2>
+          <p>Data verified on 2026-11-16 from GitHub and npm registries.</p>
         </div>
         <div class="table-wrap">
-          <table>
+          <table class="table-responsive">
             <thead>
               <tr>
-                <th>Metric</th>
+                <th>Dimension</th>
                 <th>React 19.3.1</th>
                 <th>Angular 22.2.6</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>GitHub stars</td>
-                <td class="measured">252,661</td>
-                <td class="measured">101,480</td>
+                <td data-label="Dimension">GitHub stars</td>
+                <td data-label="React 19.3.1" class="measured">252,661</td>
+                <td data-label="Angular 22.2.6" class="measured">101,480</td>
               </tr>
               <tr>
-                <td>npm weekly downloads</td>
-                <td class="measured">260,880,973</td>
-                <td class="measured">8,158,290</td>
+                <td data-label="Dimension">npm weekly downloads</td>
+                <td data-label="React 19.3.1" class="measured">260,880,973</td>
+                <td data-label="Angular 22.2.6" class="measured">8,158,290</td>
               </tr>
               <tr>
-                <td>Architecture</td>
-                <td>Composable library (choose router and state)</td>
-                <td>Opinionated platform (DI, Router, Forms built in)</td>
+                <td data-label="Dimension">Rendering model</td>
+                <td data-label="React 19.3.1">Virtual DOM + Fiber + React Compiler</td>
+                <td data-label="Angular 22.2.6">Incremental DOM / Signals (Zoneless)</td>
               </tr>
               <tr>
-                <td>Reactivity</td>
-                <td>Hooks and React Compiler</td>
-                <td>Signals (signal, computed, effect) and RxJS</td>
+                <td data-label="Dimension">Reactivity</td>
+                <td data-label="React 19.3.1">Hooks + Server Components</td>
+                <td data-label="Angular 22.2.6">Fine-grained Signals + RxJS</td>
               </tr>
               <tr>
-                <td>Identical app LOC</td>
-                <td class="measured">82 lines</td>
-                <td class="measured">93 lines</td>
+                <td data-label="Dimension">Runtime tier</td>
+                <td data-label="React 19.3.1">Medium (~45 KB min+gz with react-dom)</td>
+                <td data-label="Angular 22.2.6">Larger (~65+ KB baseline)</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Server SEO score</td>
+                <td data-label="React 19.3.1" class="measured">4/5</td>
+                <td data-label="Angular 22.2.6" class="measured">4/5</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Identical app LOC</td>
+                <td data-label="React 19.3.1" class="measured">82 lines</td>
+                <td data-label="Angular 22.2.6" class="measured">93 lines</td>
               </tr>
             </tbody>
           </table>
@@ -89,18 +116,62 @@
     <section class="section section--band">
       <div class="container">
         <div class="section__head">
-          <h2>Pick by organization size.</h2>
-          <p>Standardization across ten squads favors Angular; startup velocity favors React.</p>
+          <h2>Choose by project constraint.</h2>
+          <p>Match framework strengths to team hiring, runtime budget, and rendering architecture.</p>
         </div>
-        <div class="panels-grid">
+        <div class="panels-grid panels-grid--3">
           <article>
-            <h3>Pick Angular 22</h3>
+            <h3>When React wins</h3>
+            <p class="muted-copy">Choose React 19 for faster product iteration, composable third-party packages, and Next.js SSR defaults.</p>
+          </article>
+          <article>
+            <h3>When Angular wins</h3>
             <p class="muted-copy">Choose Angular 22 when architectural uniformity across large multi-team monorepos outweighs ecosystem flexibility.</p>
           </article>
           <article>
-            <h3>Pick React 19</h3>
-            <p class="muted-copy">Choose React 19 for faster product iteration, composable third-party packages, and Next.js SSR defaults.</p>
+            <h3>Compare via CLI</h3>
+            <p class="muted-copy">Inspect both frameworks in your terminal or inspect the identical Sprint Task Tracker implementations.</p>
+            <div class="cmd-box">
+              <code>node src/advisor.ts --compare react angular</code>
+            </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Related comparisons.</h2>
+          <p>Explore neighboring frameworks or jump back to the interactive selector.</p>
+        </div>
+        <div class="faq-list">
+          <article class="faq-item">
+            <h3>Should enterprise teams choose React or Angular in 2026?</h3>
+            <p>Choose Angular 22 if you want built-in dependency injection, router, forms, and strict conventions across large teams; choose React 19 for broader hiring and composable libraries.</p>
+          </article>
+        </div>
+        <div class="index-rows">
+          <a class="index-row" href="react-vs-vue.html">
+            <span class="index-row__title">React 19 vs Vue 3.5 in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="react-vs-svelte.html">
+            <span class="index-row__title">React 19 vs Svelte 5 in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="vue-vs-angular.html">
+            <span class="index-row__title">Vue 3.5 vs Angular 22 in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="best-frontend-framework-for-seo.html">
+            <span class="index-row__title">Best frontend frameworks for SEO</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
         </div>
       </div>
     </section>
@@ -109,11 +180,14 @@
   <footer class="site-footer">
     <div class="container">
       <div class="site-footer__top">
-        <a class="site-footer__wordmark" href="./">javascript-frontend/frontend-frameworks</a>
+        <a class="site-footer__wordmark" href="./">javascript-frontend</a>
         <div class="footer-links">
-          <a href="react-vs-vue.html">React vs Vue</a>
-          <a href="react-vs-svelte.html">React vs Svelte</a>
-          <a href="best-frontend-framework-for-seo.html">Best for SEO</a>
+          <a href="react-vs-vue.html">React 19 vs Vue 3.5 in 2026</a>
+          <a href="react-vs-svelte.html">React 19 vs Svelte 5 in 2026</a>
+          <a href="vue-vs-angular.html">Vue 3.5 vs Angular 22 in 2026</a>
+          <a href="best-frontend-framework-for-seo.html">Best frontend frameworks for SEO</a>
+          <a href="comparisons.html">All comparisons</a>
+          <a href="https://github.com/javascript-frontend/frontend-frameworks">GitHub repository</a>
         </div>
       </div>
       <div class="site-footer__bottom">

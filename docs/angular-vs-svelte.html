@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Angular vs Svelte 5 (2026): Enterprise Platform vs Compiled UI</title>
+  <meta name="description" content="Compare Angular 22.2 vs Svelte 5.57 in 2026: Signals vs Runes, runtime size, TypeScript tooling, and team scale tradeoffs." />
+  <link rel="canonical" href="https://javascript-frontend.github.io/frontend-frameworks/angular-vs-svelte.html" />
+  <meta property="og:title" content="Angular vs Svelte 5 (2026): Enterprise Platform vs Compiled UI" />
+  <meta property="og:description" content="Compare Angular 22.2 vs Svelte 5.57 in 2026: Signals vs Runes, runtime size, TypeScript tooling, and team scale tradeoffs." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://javascript-frontend.github.io/frontend-frameworks/angular-vs-svelte.html" />
+  <meta property="og:image" content="https://javascript-frontend.github.io/frontend-frameworks/assets/preview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500&family=Atkinson+Hyperlegible+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/site.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "When should a team pick Svelte 5 instead of Angular 22?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Choose Svelte 5 for small to mid-size teams optimizing bundle size and speed of iteration; keep Angular 22 for standardized large enterprise monorepos."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="site-nav">
+    <div class="container site-nav__inner">
+      <a class="brand" href="./">javascript-frontend</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="./">All frameworks</a>
+        <a href="comparisons.html">Directory</a>
+        <a href="react-vs-vue.html">React vs Vue</a>
+        <a href="react-vs-svelte.html">React vs Svelte</a>
+        <a href="best-frontend-framework-for-seo.html">Best for SEO</a>
+        <a href="https://github.com/javascript-frontend/frontend-frameworks">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-banner">
+      <div class="container">
+        <h1>Angular 22 vs Svelte 5 in 2026.</h1>
+        <p class="lead">Full-featured enterprise platform versus lightweight compiled Runes reactivity.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Compare verified metrics side by side.</h2>
+          <p>Data verified on 2026-11-16 from GitHub and npm registries.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="table-responsive">
+            <thead>
+              <tr>
+                <th>Dimension</th>
+                <th>Angular 22.2.6</th>
+                <th>Svelte 5.57.3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Dimension">GitHub stars</td>
+                <td data-label="Angular 22.2.6" class="measured">101,480</td>
+                <td data-label="Svelte 5.57.3" class="measured">88,785</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">npm weekly downloads</td>
+                <td data-label="Angular 22.2.6" class="measured">8,158,290</td>
+                <td data-label="Svelte 5.57.3" class="measured">9,766,604</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Rendering model</td>
+                <td data-label="Angular 22.2.6">Incremental DOM / Signals (Zoneless)</td>
+                <td data-label="Svelte 5.57.3">Compiled Fine-Grained DOM Updates</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Reactivity</td>
+                <td data-label="Angular 22.2.6">Fine-grained Signals + RxJS</td>
+                <td data-label="Svelte 5.57.3">Svelte 5 Runes ($state, $derived, $effect)</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Runtime tier</td>
+                <td data-label="Angular 22.2.6">Larger (~65+ KB baseline)</td>
+                <td data-label="Svelte 5.57.3">Tiny (~3-5 KB runtime overhead)</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Server SEO score</td>
+                <td data-label="Angular 22.2.6" class="measured">4/5</td>
+                <td data-label="Svelte 5.57.3" class="measured">5/5</td>
+              </tr>
+              <tr>
+                <td data-label="Dimension">Identical app LOC</td>
+                <td data-label="Angular 22.2.6" class="measured">93 lines</td>
+                <td data-label="Svelte 5.57.3" class="measured">77 lines</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--band">
+      <div class="container">
+        <div class="section__head">
+          <h2>Choose by project constraint.</h2>
+          <p>Match framework strengths to team hiring, runtime budget, and rendering architecture.</p>
+        </div>
+        <div class="panels-grid panels-grid--3">
+          <article>
+            <h3>When Angular wins</h3>
+            <p class="muted-copy">Pick Angular 22 for regulated enterprise portals, large frontend orgs, and built-in forms, validation, and routing.</p>
+          </article>
+          <article>
+            <h3>When Svelte wins</h3>
+            <p class="muted-copy">Pick Svelte 5 for fast product shipping, tiny JavaScript payloads, and low ceremony.</p>
+          </article>
+          <article>
+            <h3>Compare via CLI</h3>
+            <p class="muted-copy">Inspect both frameworks in your terminal or inspect the identical Sprint Task Tracker implementations.</p>
+            <div class="cmd-box">
+              <code>node src/advisor.ts --compare angular svelte</code>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Related comparisons.</h2>
+          <p>Explore neighboring frameworks or jump back to the interactive selector.</p>
+        </div>
+        <div class="faq-list">
+          <article class="faq-item">
+            <h3>When should a team pick Svelte 5 instead of Angular 22?</h3>
+            <p>Choose Svelte 5 for small to mid-size teams optimizing bundle size and speed of iteration; keep Angular 22 for standardized large enterprise monorepos.</p>
+          </article>
+        </div>
+        <div class="index-rows">
+          <a class="index-row" href="react-vs-angular.html">
+            <span class="index-row__title">React 19 vs Angular 22 in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="vue-vs-angular.html">
+            <span class="index-row__title">Vue 3.5 vs Angular 22 in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="svelte-vs-solidjs.html">
+            <span class="index-row__title">Svelte 5 vs SolidJS 1.9 in 2026</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+          <a class="index-row" href="best-frontend-framework-for-enterprise.html">
+            <span class="index-row__title">Best enterprise frontend frameworks</span>
+            <span class="index-row__desc">Verified metrics and architecture breakdown.</span>
+            <span class="index-row__action">Read</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <a class="site-footer__wordmark" href="./">javascript-frontend</a>
+        <div class="footer-links">
+          <a href="react-vs-angular.html">React 19 vs Angular 22 in 2026</a>
+          <a href="vue-vs-angular.html">Vue 3.5 vs Angular 22 in 2026</a>
+          <a href="svelte-vs-solidjs.html">Svelte 5 vs SolidJS 1.9 in 2026</a>
+          <a href="best-frontend-framework-for-enterprise.html">Best enterprise frontend frameworks</a>
+          <a href="comparisons.html">All comparisons</a>
+          <a href="https://github.com/javascript-frontend/frontend-frameworks">GitHub repository</a>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>Data verified 2026-11-16</span>
+        <span>MIT License</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
