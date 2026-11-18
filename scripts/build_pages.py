@@ -26,7 +26,7 @@ VS_PAIRS: list[dict[str, Any]] = [
         "loc_a": "82 lines",
         "loc_b": "76 lines",
         "win_a": "Pick React 19 for maximum hiring reach, third-party AI and UI ecosystems (Radix, shadcn/ui, TanStack), and Next.js full-stack conventions.",
-        "win_b": "Pick Vue 3.5 for cohesive first-party tooling (Vue Router, Pinia, Nuxt 4), clear HTML single-file components, and fast team onboarding.",
+        "win_b": "Pick Vue 3.5 for first-party tooling (Vue Router, Pinia, Nuxt 4), clear HTML single-file components, and fast team onboarding.",
         "faq_q": "Should I choose React or Vue in 2026?",
         "faq_a": "Choose React 19 if hiring pool, third-party UI libraries, and Next.js ecosystem breadth matter most. Choose Vue 3.5 if you want cleaner single-file components, faster onboarding, and official first-party routing and state via Vue Router, Pinia, and Nuxt 4.",
         "related": ["react-vs-svelte.html", "react-vs-angular.html", "vue-vs-svelte.html", "best-frontend-framework-for-seo.html"],
@@ -42,7 +42,7 @@ VS_PAIRS: list[dict[str, Any]] = [
         "loc_a": "82 lines",
         "loc_b": "77 lines",
         "win_a": "Choose React 19 when your team relies on React-specific libraries, multi-vendor design systems, or large hiring pools.",
-        "win_b": "Choose Svelte 5 for lean client bundles, zero Virtual DOM overhead, fewer re-render pitfalls, and cohesive SvelteKit full-stack delivery.",
+        "win_b": "Choose Svelte 5 for lean client bundles, zero Virtual DOM overhead, fewer re-render pitfalls, and SvelteKit full-stack delivery.",
         "faq_q": "Is Svelte 5 faster than React 19?",
         "faq_a": "Svelte 5 compiles templates into direct DOM updates with a 3 to 5 KB runtime overhead and no Virtual DOM diffing, making initial bundles smaller than React 19.",
         "related": ["react-vs-vue.html", "react-vs-angular.html", "svelte-vs-solidjs.html", "lightweight-frontend-frameworks.html"],
@@ -192,11 +192,11 @@ VS_PAIRS: list[dict[str, Any]] = [
         "title": "Next.js vs Nuxt (2026): React App Router vs Vue Nitro Engine",
         "desc": "Compare Next.js 16.4 vs Nuxt 4.6 in 2026: SSR, hybrid caching, Server Components vs Vue SFCs, and ecosystem adoption.",
         "h1": "Next.js 16 vs Nuxt 4 in 2026.",
-        "lead": "The flagship full-stack meta-frameworks for React 19 and Vue 3.5 compared.",
+        "lead": "The main full-stack meta-frameworks for React 19 and Vue 3.5 compared.",
         "win_a": "Pick Next.js 16 for React talent availability, Vercel/edge ecosystem support, and React Server Components.",
         "win_b": "Pick Nuxt 4 for Nitro universal deployment, auto-imports, cleaner configuration, and Vue 3.5 ergonomics.",
         "faq_q": "Which is simpler to configure: Next.js 16 or Nuxt 4?",
-        "faq_a": "Many teams find Nuxt 4's Nitro engine, built-in modules, and route rules more cohesive out of the box, while Next.js 16 offers a larger third-party React ecosystem.",
+        "faq_a": "Many teams find Nuxt 4's Nitro engine, built-in modules, and route rules more integrated out of the box, while Next.js 16 offers a larger third-party React ecosystem.",
         "related": ["react-vs-vue.html", "nuxt-vs-sveltekit.html", "nextjs-vs-sveltekit.html", "best-frontend-framework-for-seo.html"],
     },
     {
@@ -210,7 +210,7 @@ VS_PAIRS: list[dict[str, Any]] = [
         "win_a": "Pick Next.js 16 when hiring React engineers and relying on React-first SaaS SDKs and UI libraries.",
         "win_b": "Pick SvelteKit 3 for smaller client payloads, progressive HTML form actions, and fast full-stack iteration.",
         "faq_q": "Why do indie teams switch from Next.js to SvelteKit?",
-        "faq_a": "Teams cite smaller client bundles, simpler mental models without Server/Client component boundaries, and straightforward Vite-based adapters.",
+        "faq_a": "Teams cite smaller client bundles, simpler mental models without Server/Client component boundaries, and Vite-based adapters.",
         "related": ["react-vs-svelte.html", "nuxt-vs-sveltekit.html", "astro-vs-sveltekit.html", "nextjs-alternatives.html"],
     },
     {
@@ -234,8 +234,8 @@ VS_PAIRS: list[dict[str, Any]] = [
         "title": "Nuxt vs SvelteKit (2026): Full-Stack Vue 3.5 vs Svelte 5 Runes",
         "desc": "Compare Nuxt 4.6 vs SvelteKit 3.2 in 2026: Nitro server engine vs SvelteKit adapters, bundle size, and developer ergonomics.",
         "h1": "Nuxt 4 vs SvelteKit 3 in 2026.",
-        "lead": "Two cohesive non-React full-stack frameworks built on Vite and standard web APIs.",
-        "win_a": "Pick Nuxt 4 if your team knows Vue 3.5, wants rich module presets, and values Nitro's hybrid caching.",
+        "lead": "Two non-React full-stack frameworks built on Vite and standard web APIs.",
+        "win_a": "Pick Nuxt 4 if your team knows Vue 3.5, wants built-in module presets, and values Nitro's hybrid caching.",
         "win_b": "Pick SvelteKit 3 for minimal client runtime overhead and clean form-first progressive enhancement.",
         "faq_q": "Is Nuxt 4 heavier than SvelteKit 3?",
         "faq_a": "SvelteKit 3 compiles components without a Virtual DOM runtime, producing slightly smaller client bundles than Nuxt 4, though both offer strong SSR performance.",
@@ -402,7 +402,7 @@ ALTERNATIVES_PAGES: list[dict[str, Any]] = [
             "solid": "Compiled fine-grained signals with TypeScript JSX instead of SFCs.",
             "vue": "Single-file components with a larger ecosystem and Nuxt 4 support.",
             "preact": "4 KB Virtual DOM runtime compatible with existing React packages.",
-            "astro": "Zero-JS Islands architecture ideal for content and SEO landings.",
+            "astro": "Zero-JS Islands architecture suited to content and SEO landings.",
             "qwik": "Resumable execution avoiding hydration on heavy interactive pages.",
         },
         "faq_q": "What matches Svelte's small bundle size?",
@@ -436,7 +436,7 @@ ALTERNATIVES_PAGES: list[dict[str, Any]] = [
         "title": "Best Nuxt Alternatives in 2026 (Astro, SvelteKit, Next.js, Vue + Vite)",
         "desc": "Compare top Nuxt 4 alternatives in 2026: Astro 7 for content sites, SvelteKit 3, Next.js 16, and standalone Vue 3.5 with Vite.",
         "h1": "Best Nuxt alternatives in 2026.",
-        "lead": "Lighter SSR and static options when Nuxt 4 is more server framework than you need.",
+        "lead": "Lighter SSR and static Vue options.",
         "picks": ["astro", "sveltekit", "nextjs", "vue", "react-router"],
         "reasons": {
             "astro": "Zero-JS static Islands that still render Vue 3 components where needed.",
@@ -474,14 +474,14 @@ ALTERNATIVES_PAGES: list[dict[str, Any]] = [
         "target_name": "htmx",
         "target_id": "htmx",
         "title": "Best htmx Alternatives in 2026 (Alpine.js, Astro, Svelte, Preact)",
-        "desc": "Compare htmx alternatives in 2026: Alpine.js for client directives, Astro 7, Svelte 5, Preact 11, and React 19 for rich client state.",
+        "desc": "Compare htmx alternatives in 2026: Alpine.js for client directives, Astro 7, Svelte 5, Preact 11, and React 19 for stateful client interactions.",
         "h1": "Best htmx alternatives in 2026.",
         "lead": "Client-side and zero-JS alternatives when server HTML partials hit limits.",
         "picks": ["alpine", "astro", "svelte", "preact", "react"],
         "reasons": {
             "alpine": "Zero-build client state directly in HTML without server round-trips.",
             "astro": "Zero-JS static HTML paired with isolated interactive component islands.",
-            "svelte": "Tiny compiled client UI when rich local interactions become complex.",
+            "svelte": "Tiny compiled client UI when complex local interactions become complex.",
             "preact": "4 KB React-compatible islands for dropping interactivity into HTML pages.",
             "react": "Full client ecosystem for offline-ready editors and complex dashboards.",
         },
@@ -568,7 +568,7 @@ WORKLOAD_PAGES: list[dict[str, Any]] = [
             "htmx": "~14 KB, no build; server-driven HTML partials without JSON SPAs.",
         },
         "panel_a_title": "Client SPAs and islands",
-        "panel_a_body": "Pick Preact, SolidJS, or Svelte 5 when you need rich client state with a minimal bundle budget.",
+        "panel_a_body": "Pick Preact, SolidJS, or Svelte 5 when you need stateful client interactions with a minimal bundle budget.",
         "panel_b_title": "Zero-build server HTML",
         "panel_b_body": "Pick Alpine.js or htmx when Rails, Django, Laravel, or Go templates already render your pages.",
         "related": ["react-vs-svelte.html", "best-frontend-framework-for-seo.html", "svelte-vs-solidjs.html", "alpinejs-vs-htmx.html"],
@@ -641,7 +641,7 @@ WORKLOAD_PAGES: list[dict[str, Any]] = [
         "lead": "Build token-streaming interfaces, artifact panels, and responsive agent workspaces.",
         "picks": ["react", "nextjs", "sveltekit", "solid", "vue"],
         "reasons": {
-            "react": "First-class SDK support (Vercel AI SDK, CopilotKit, Assistant UI) and rich markdown libraries.",
+            "react": "First-class SDK support (Vercel AI SDK, CopilotKit, Assistant UI) and markdown and UI libraries.",
             "nextjs": "Streaming route handlers, server actions, and React Server Components.",
             "sveltekit": "Smooth high-frequency token updates with minimal runtime overhead.",
             "solid": "Fine-grained signal updates avoid diffing large chat histories on each streamed token.",
@@ -817,7 +817,7 @@ def build_vs_page(spec: dict[str, Any], fws: dict[str, dict[str, Any]], label_ma
     <section class="section">
       <div class="container">
         <div class="section__head">
-          <h2>Compare verified metrics side by side.</h2>
+          <h2>Verified metrics.</h2>
           <p>Data verified on 2026-11-16 from GitHub and npm registries.</p>
         </div>
         <div class="table-wrap">
@@ -934,7 +934,7 @@ def build_alternatives_page(spec: dict[str, Any], fws: dict[str, dict[str, Any]]
     <section class="section">
       <div class="container">
         <div class="section__head">
-          <h2>Compare verified {escape(spec['target_name'])} alternatives.</h2>
+          <h2>Verified {escape(spec['target_name'])} alternatives.</h2>
           <p>GitHub stars, npm adoption, and runtime tiers verified on 2026-11-16.</p>
         </div>
         <div class="table-wrap">
@@ -960,7 +960,7 @@ def build_alternatives_page(spec: dict[str, Any], fws: dict[str, dict[str, Any]]
     <section class="section section--band">
       <div class="container">
         <div class="section__head">
-          <h2>How to migrate cleanly.</h2>
+          <h2>Migration steps.</h2>
           <p>Test one route or widget before committing a full rewrite.</p>
         </div>
         <div class="panels-grid panels-grid--3">

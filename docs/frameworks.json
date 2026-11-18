@@ -53,7 +53,7 @@
       "runtime_tier": "Small-Medium (~22 KB min+gz)",
       "best_for": ["saas-dashboard", "internal-tool", "ecommerce"],
       "starter_path": "starters/vue3-vite-ts-app",
-      "summary": "Balanced single-file components, gentle learning curve, and cohesive official router/state tooling (Pinia, Nuxt)."
+      "summary": "Balanced single-file components, gentle learning curve, and first-party router/state tooling (Pinia, Nuxt)."
     },
     {
       "id": "angular",
@@ -75,7 +75,7 @@
       "runtime_tier": "Larger (~65+ KB baseline)",
       "best_for": ["enterprise-app", "internal-tool", "saas-dashboard"],
       "starter_path": null,
-      "summary": "Batteries-included TypeScript platform with built-in DI, router, forms, and strict conventions for large teams."
+      "summary": "Full-featured TypeScript platform with built-in DI, router, forms, and strict conventions for large teams."
     },
     {
       "id": "svelte",
@@ -119,7 +119,7 @@
       "runtime_tier": "Tiny (~7 KB min+gz)",
       "best_for": ["saas-dashboard", "ai-app", "lightweight-widget"],
       "starter_path": null,
-      "summary": "JSX ergonomics with top-tier benchmark speed because components run once and only reactive bindings update DOM."
+      "summary": "JSX syntax with fine-grained updates because components run once and only reactive bindings touch the DOM."
     },
     {
       "id": "preact",
@@ -141,7 +141,7 @@
       "runtime_tier": "Tiny (~4 KB min+gz)",
       "best_for": ["lightweight-widget", "ecommerce", "seo-content"],
       "starter_path": null,
-      "summary": "Fast 4 KB React-compatible alternative ideal for embeddable widgets, performance-sensitive storefronts, and Islands."
+      "summary": "4 KB React-compatible library for embeddable widgets, storefronts, and Islands."
     },
     {
       "id": "qwik",
@@ -274,7 +274,7 @@
       "runtime_tier": "Full-stack Vue",
       "best_for": ["saas-dashboard", "ecommerce", "seo-content"],
       "starter_path": null,
-      "summary": "Cohesive full-stack Vue meta-framework powered by Nitro with auto-imports, hybrid rendering, and strong SEO DX."
+      "summary": "Full-stack Vue framework built on Nitro with auto-imports, hybrid rendering, and SEO modules."
     },
     {
       "id": "sveltekit",
@@ -318,7 +318,7 @@
       "runtime_tier": "Zero JS baseline",
       "best_for": ["seo-content", "ecommerce"],
       "starter_path": "starters/astro-seo-landing",
-      "summary": "Best-in-class content, marketing, docs, and SEO framework that ships zero client JS unless an interactive island opts in."
+      "summary": "Content, marketing, docs, and SEO framework that ships zero client JavaScript unless an interactive island opts in."
     },
     {
       "id": "react-router",
